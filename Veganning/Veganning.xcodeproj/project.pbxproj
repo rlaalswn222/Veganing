@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
+		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
+		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
+		5847F10D2C5CFAC9001AC04E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F10C2C5CFAC9001AC04E /* Preview Assets.xcassets */; };
+		5847F1172C5CFAC9001AC04E /* VeganningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1162C5CFAC9001AC04E /* VeganningTests.swift */; };
+		5847F1212C5CFAC9001AC04E /* VeganningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1202C5CFAC9001AC04E /* VeganningUITests.swift */; };
+		5847F1232C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5847F1132C5CFAC9001AC04E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5847F0FA2C5CFAC8001AC04E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5847F1012C5CFAC8001AC04E;
+			remoteInfo = Veganning;
+		};
+		5847F11D2C5CFAC9001AC04E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5847F0FA2C5CFAC8001AC04E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5847F1012C5CFAC8001AC04E;
+			remoteInfo = Veganning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5847F1022C5CFAC8001AC04E /* Veganning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5847F1052C5CFAC8001AC04E /* VeganningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningApp.swift; sourceTree = "<group>"; };
+		5847F1072C5CFAC8001AC04E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5847F1092C5CFAC9001AC04E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5847F10C2C5CFAC9001AC04E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5847F1122C5CFAC9001AC04E /* VeganningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeganningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5847F1162C5CFAC9001AC04E /* VeganningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningTests.swift; sourceTree = "<group>"; };
+		5847F11C2C5CFAC9001AC04E /* VeganningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeganningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5847F1202C5CFAC9001AC04E /* VeganningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningUITests.swift; sourceTree = "<group>"; };
+		5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5847F0FF2C5CFAC8001AC04E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F10F2C5CFAC9001AC04E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F1192C5CFAC9001AC04E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5847F0F92C5CFAC8001AC04E = {
+			isa = PBXGroup;
+			children = (
+				5847F1042C5CFAC8001AC04E /* Veganning */,
+				5847F1152C5CFAC9001AC04E /* VeganningTests */,
+				5847F11F2C5CFAC9001AC04E /* VeganningUITests */,
+				5847F1032C5CFAC8001AC04E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5847F1032C5CFAC8001AC04E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5847F1022C5CFAC8001AC04E /* Veganning.app */,
+				5847F1122C5CFAC9001AC04E /* VeganningTests.xctest */,
+				5847F11C2C5CFAC9001AC04E /* VeganningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5847F1042C5CFAC8001AC04E /* Veganning */ = {
+			isa = PBXGroup;
+			children = (
+				5847F1052C5CFAC8001AC04E /* VeganningApp.swift */,
+				5847F1072C5CFAC8001AC04E /* ContentView.swift */,
+				5847F1092C5CFAC9001AC04E /* Assets.xcassets */,
+				5847F10B2C5CFAC9001AC04E /* Preview Content */,
+			);
+			path = Veganning;
+			sourceTree = "<group>";
+		};
+		5847F10B2C5CFAC9001AC04E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5847F10C2C5CFAC9001AC04E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5847F1152C5CFAC9001AC04E /* VeganningTests */ = {
+			isa = PBXGroup;
+			children = (
+				5847F1162C5CFAC9001AC04E /* VeganningTests.swift */,
+			);
+			path = VeganningTests;
+			sourceTree = "<group>";
+		};
+		5847F11F2C5CFAC9001AC04E /* VeganningUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5847F1202C5CFAC9001AC04E /* VeganningUITests.swift */,
+				5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */,
+			);
+			path = VeganningUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5847F1012C5CFAC8001AC04E /* Veganning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5847F1262C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "Veganning" */;
+			buildPhases = (
+				5847F0FE2C5CFAC8001AC04E /* Sources */,
+				5847F0FF2C5CFAC8001AC04E /* Frameworks */,
+				5847F1002C5CFAC8001AC04E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Veganning;
+			productName = Veganning;
+			productReference = 5847F1022C5CFAC8001AC04E /* Veganning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5847F1112C5CFAC9001AC04E /* VeganningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5847F1292C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "VeganningTests" */;
+			buildPhases = (
+				5847F10E2C5CFAC9001AC04E /* Sources */,
+				5847F10F2C5CFAC9001AC04E /* Frameworks */,
+				5847F1102C5CFAC9001AC04E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5847F1142C5CFAC9001AC04E /* PBXTargetDependency */,
+			);
+			name = VeganningTests;
+			productName = VeganningTests;
+			productReference = 5847F1122C5CFAC9001AC04E /* VeganningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5847F11B2C5CFAC9001AC04E /* VeganningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5847F12C2C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "VeganningUITests" */;
+			buildPhases = (
+				5847F1182C5CFAC9001AC04E /* Sources */,
+				5847F1192C5CFAC9001AC04E /* Frameworks */,
+				5847F11A2C5CFAC9001AC04E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5847F11E2C5CFAC9001AC04E /* PBXTargetDependency */,
+			);
+			name = VeganningUITests;
+			productName = VeganningUITests;
+			productReference = 5847F11C2C5CFAC9001AC04E /* VeganningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5847F0FA2C5CFAC8001AC04E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					5847F1012C5CFAC8001AC04E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					5847F1112C5CFAC9001AC04E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 5847F1012C5CFAC8001AC04E;
+					};
+					5847F11B2C5CFAC9001AC04E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 5847F1012C5CFAC8001AC04E;
+					};
+				};
+			};
+			buildConfigurationList = 5847F0FD2C5CFAC8001AC04E /* Build configuration list for PBXProject "Veganning" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5847F0F92C5CFAC8001AC04E;
+			productRefGroup = 5847F1032C5CFAC8001AC04E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5847F1012C5CFAC8001AC04E /* Veganning */,
+				5847F1112C5CFAC9001AC04E /* VeganningTests */,
+				5847F11B2C5CFAC9001AC04E /* VeganningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5847F1002C5CFAC8001AC04E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5847F10D2C5CFAC9001AC04E /* Preview Assets.xcassets in Resources */,
+				5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F1102C5CFAC9001AC04E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F11A2C5CFAC9001AC04E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5847F0FE2C5CFAC8001AC04E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
+				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F10E2C5CFAC9001AC04E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5847F1172C5CFAC9001AC04E /* VeganningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5847F1182C5CFAC9001AC04E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5847F1232C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift in Sources */,
+				5847F1212C5CFAC9001AC04E /* VeganningUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5847F1142C5CFAC9001AC04E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5847F1012C5CFAC8001AC04E /* Veganning */;
+			targetProxy = 5847F1132C5CFAC9001AC04E /* PBXContainerItemProxy */;
+		};
+		5847F11E2C5CFAC9001AC04E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5847F1012C5CFAC8001AC04E /* Veganning */;
+			targetProxy = 5847F11D2C5CFAC9001AC04E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5847F1242C5CFAC9001AC04E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5847F1252C5CFAC9001AC04E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5847F1272C5CFAC9001AC04E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Veganning/Preview Content\"";
+				DEVELOPMENT_TEAM = G62DUX396A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Veganning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5847F1282C5CFAC9001AC04E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Veganning/Preview Content\"";
+				DEVELOPMENT_TEAM = G62DUX396A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Veganning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5847F12A2C5CFAC9001AC04E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G62DUX396A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VeganningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Veganning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Veganning";
+			};
+			name = Debug;
+		};
+		5847F12B2C5CFAC9001AC04E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G62DUX396A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VeganningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Veganning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Veganning";
+			};
+			name = Release;
+		};
+		5847F12D2C5CFAC9001AC04E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G62DUX396A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VeganningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Veganning;
+			};
+			name = Debug;
+		};
+		5847F12E2C5CFAC9001AC04E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G62DUX396A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VeganningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Veganning;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5847F0FD2C5CFAC8001AC04E /* Build configuration list for PBXProject "Veganning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5847F1242C5CFAC9001AC04E /* Debug */,
+				5847F1252C5CFAC9001AC04E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5847F1262C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "Veganning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5847F1272C5CFAC9001AC04E /* Debug */,
+				5847F1282C5CFAC9001AC04E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5847F1292C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "VeganningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5847F12A2C5CFAC9001AC04E /* Debug */,
+				5847F12B2C5CFAC9001AC04E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5847F12C2C5CFAC9001AC04E /* Build configuration list for PBXNativeTarget "VeganningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5847F12D2C5CFAC9001AC04E /* Debug */,
+				5847F12E2C5CFAC9001AC04E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5847F0FA2C5CFAC8001AC04E /* Project object */;
+}
