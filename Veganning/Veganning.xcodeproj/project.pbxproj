@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D6C97F2C5D057800EB505B /* RecipeTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6C97E2C5D057800EB505B /* RecipeTapView.swift */; };
+		52D6C9812C5D05FF00EB505B /* ReviewDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6C9802C5D05FF00EB505B /* ReviewDetailView.swift */; };
 		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
 		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
 		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52D6C97E2C5D057800EB505B /* RecipeTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTapView.swift; sourceTree = "<group>"; };
+		52D6C9802C5D05FF00EB505B /* ReviewDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailView.swift; sourceTree = "<group>"; };
 		5847F1022C5CFAC8001AC04E /* Veganning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847F1052C5CFAC8001AC04E /* VeganningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningApp.swift; sourceTree = "<group>"; };
 		5847F1072C5CFAC8001AC04E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				5847F1072C5CFAC8001AC04E /* ContentView.swift */,
 				5847F1092C5CFAC9001AC04E /* Assets.xcassets */,
 				5847F10B2C5CFAC9001AC04E /* Preview Content */,
+				52D6C97E2C5D057800EB505B /* RecipeTapView.swift */,
+				52D6C9802C5D05FF00EB505B /* ReviewDetailView.swift */,
 			);
 			path = Veganning;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
+				52D6C9812C5D05FF00EB505B /* ReviewDetailView.swift in Sources */,
 				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
+				52D6C97F2C5D057800EB505B /* RecipeTapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
