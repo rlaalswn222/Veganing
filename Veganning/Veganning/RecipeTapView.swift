@@ -259,11 +259,8 @@ struct RecipeTapView: View {
     }
 }
 
-
-
 struct RecipeTapView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeTapView()
     }
 }
-
