@@ -77,6 +77,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58036AA32C64B5180022BC8F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		58036AA42C64B5180022BC8F /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		58036AA52C64B5180022BC8F /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		58036AA62C64B5180022BC8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58036AA32C64B5180022BC8F /* Home */,
+				58036AA42C64B5180022BC8F /* MyPage */,
+				58036AA52C64B5180022BC8F /* Recipe */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58036AA72C64B51F0022BC8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		5847F0F92C5CFAC8001AC04E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +138,8 @@
 		5847F1042C5CFAC8001AC04E /* Veganning */ = {
 			isa = PBXGroup;
 			children = (
+				58036AA72C64B51F0022BC8F /* Resource */,
+				58036AA62C64B5180022BC8F /* View */,
 				5847F1052C5CFAC8001AC04E /* VeganningApp.swift */,
 				5847F1072C5CFAC8001AC04E /* ContentView.swift */,
 				5847F1092C5CFAC9001AC04E /* Assets.xcassets */,
