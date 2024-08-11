@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		58036AA12C649DAC0022BC8F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 58036AA02C649DAC0022BC8F /* .swiftlint.yml */; };
+		58036AAA2C64B81B0022BC8F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58036AA92C64B81B0022BC8F /* CustomTabView.swift */; };
 		5232A51A2C63D29D00B344E9 /* MyContestEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232A5192C63D29D00B344E9 /* MyContestEditView.swift */; };
 		5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232A51D2C63DB5300B344E9 /* RecipeContest.swift */; };
 		529C02CA2C62516600C78438 /* RecipeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C02C92C62516600C78438 /* RecipeMainView.swift */; };
 		529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C02CB2C62641300C78438 /* RecipeReviewView.swift */; };
 		529C02CE2C629B0200C78438 /* MyContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C02CD2C629B0200C78438 /* MyContestView.swift */; };
 		52D6C9812C5D05FF00EB505B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6C9802C5D05FF00EB505B /* RecipeDetailView.swift */; };
+
 		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
 		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
 		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
+		58036AA02C649DAC0022BC8F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		58036AA92C64B81B0022BC8F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+
 		5232A5192C63D29D00B344E9 /* MyContestEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContestEditView.swift; sourceTree = "<group>"; };
 		5232A51D2C63DB5300B344E9 /* RecipeContest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeContest.swift; sourceTree = "<group>"; };
 		529C02C92C62516600C78438 /* RecipeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMainView.swift; sourceTree = "<group>"; };
@@ -83,14 +91,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52D6C9822C5D0A2B00EB505B /* View */ = {
+		58036AA32C64B5180022BC8F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				52D6C9832C5D0A3600EB505B /* Recipe */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		58036AA42C64B5180022BC8F /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		58036AA52C64B5180022BC8F /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		58036AA62C64B5180022BC8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58036AA82C64B7ED0022BC8F /* MainTab */,
+				58036AA32C64B5180022BC8F /* Home */,
+				58036AA42C64B5180022BC8F /* MyPage */,
+				58036AA52C64B5180022BC8F /* Recipe */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+
+		58036AA72C64B51F0022BC8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		58036AA82C64B7ED0022BC8F /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				58036AA92C64B81B0022BC8F /* CustomTabView.swift */,
+			);
+			path = MainTab;
+
 		52D6C9832C5D0A3600EB505B /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +174,9 @@
 		5847F1042C5CFAC8001AC04E /* Veganning */ = {
 			isa = PBXGroup;
 			children = (
-				52D6C9822C5D0A2B00EB505B /* View */,
+
+				58036AA72C64B51F0022BC8F /* Resource */,
+				58036AA62C64B5180022BC8F /* View */,
 				5847F1052C5CFAC8001AC04E /* VeganningApp.swift */,
 				5847F1072C5CFAC8001AC04E /* ContentView.swift */,
 				5847F1092C5CFAC9001AC04E /* Assets.xcassets */,
@@ -292,6 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
+
+				58036AAA2C64B81B0022BC8F /* CustomTabView.swift in Sources */,
+
 				529C02CE2C629B0200C78438 /* MyContestView.swift in Sources */,
 				52D6C9812C5D05FF00EB505B /* RecipeDetailView.swift in Sources */,
 				529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */,
