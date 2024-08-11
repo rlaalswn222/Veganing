@@ -12,7 +12,7 @@ struct VeganningApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RecipeTapView()
+            RecipeMainView()
         }
     }
 }
