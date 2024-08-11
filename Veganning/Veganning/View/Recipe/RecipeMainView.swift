@@ -40,33 +40,28 @@ struct RecipeMainView: View {
                     .background(Color.main)
                 }
                 
-                // Tabs
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: RecipeMainView()) {
-                        VStack {
-                            Text("레시피")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.black))
-                                .foregroundColor(selectedTab == 1 ? .main : .white)
-                                .padding()
-                                .background(selectedTab == 1 ? Color.white : Color.clear)
-                                .cornerRadius(10)
-                        }
+                HStack(spacing: 14) {
+                    Button(action: {
+                        selectedTab = 1
+                    }) {
+                        Text("레시피")
+                            .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.black))
+                            .foregroundColor(selectedTab == 1 ? .main : .white)
+                            .padding()
+                            .background(selectedTab == 1 ? Color.white : Color.clear)
+                            .cornerRadius(10)
                     }
-                    .isDetailLink(false) // 추가: 이 링크가 디테일 뷰가 아님을 지정
-                    Spacer()
-                    NavigationLink(destination: MyContestView()) {
-                        VStack {
-                            Text("내 공모")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.black))
-                                .foregroundColor(selectedTab == 2 ? .main : .white)
-                                .padding()
-                                .background(selectedTab == 2 ? Color.white : Color.clear)
-                                .cornerRadius(10)
-                        }
+                    
+                    Button(action: {
+                        selectedTab = 2
+                    }) {
+                        Text("내 공모")
+                            .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.black))
+                            .foregroundColor(selectedTab == 2 ? .main : .white)
+                            .padding()
+                            .background(selectedTab == 2 ? Color.white : Color.clear)
+                            .cornerRadius(10)
                     }
-                    .isDetailLink(false) // 추가: 이 링크가 디테일 뷰가 아님을 지정
-                    Spacer()
                 }
                 .padding()
                 .background(Color.main)
@@ -182,8 +177,6 @@ struct RecipeMainView: View {
 }
 
 //레시피카드
-
-
 
 struct RecipeCard: View {
     var title: String
