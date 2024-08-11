@@ -21,8 +21,6 @@ struct RecipeMainView: View {
                                 .padding(.leading, 10)
                                 .padding(.vertical, 8)
                             
-                            
-                            
                             Spacer()
                             
                             Button(action: {
@@ -65,101 +63,7 @@ struct RecipeMainView: View {
                 }
                 .padding()
                 .background(Color.main)
-                
-                
-                // Filter Bar
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .center, spacing: 10) {
-                        Button(action: {
-                            selectedFilter = "전체"
-                        }) {
-                            Text("전체")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).weight(.bold))
-                                .foregroundColor(selectedFilter == "전체" ? .black : Color.grey4)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
-                                .background(selectedFilter == "전체" ? Color.sub1 : Color.clear)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .inset(by: 0.89)
-                                        .stroke(selectedFilter == "전체" ? Color.sub1 : Color.grey2, lineWidth: 1.77)
-                                )
-                        }
-                        
-                        Button(action: {
-                            selectedFilter = "락토"
-                        }) {
-                            Text("락토")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).weight(.bold))
-                                .foregroundColor(selectedFilter == "락토" ? .black : Color.grey4)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
-                                .background(selectedFilter == "락토" ? Color.sub1 : Color.clear)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .inset(by: 0.89)
-                                        .stroke(selectedFilter == "락토" ? Color.sub1 : Color.grey2, lineWidth: 1.77)
-                                )
-                        }
-                        
-                        Button(action: {
-                            selectedFilter = "비건"
-                        }) {
-                            Text("비건")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).weight(.bold))
-                                .foregroundColor(selectedFilter == "비건" ? .black : Color.grey4)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
-                                .background(selectedFilter == "비건" ? Color.sub1 : Color.clear)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .inset(by: 0.89)
-                                        .stroke(selectedFilter == "비건" ? Color.sub1 : Color.grey2, lineWidth: 1.77)
-                                )
-                        }
-                        
-                        Button(action: {
-                            selectedFilter = "오보"
-                        }) {
-                            Text("오보")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).weight(.bold))
-                                .foregroundColor(selectedFilter == "오보" ? .black : Color.grey4)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
-                                .background(selectedFilter == "오보" ? Color.sub1 : Color.clear)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .inset(by: 0.89)
-                                        .stroke(selectedFilter == "오보" ? Color.sub1 : Color.grey2, lineWidth: 1.77)
-                                )
-                        }
-                        
-                        Button(action: {
-                            selectedFilter = "락토오보"
-                        }) {
-                            Text("락토오보")
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).weight(.bold))
-                                .foregroundColor(selectedFilter == "락토오보" ? .black : Color.grey4)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
-                                .background(selectedFilter == "락토오보" ? Color.sub1 : Color.clear)
-                                .cornerRadius(50)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .inset(by: 0.89)
-                                        .stroke(selectedFilter == "락토오보" ? Color.sub1 : Color.grey2, lineWidth: 1.77)
-                                )
-                        }
-                    }
-                    .padding(.horizontal)
-                    .padding(10)
-                }
-                
-                // Recipe List
+                FilterBar(selectedFilter: $selectedFilter)
                 ScrollView {
                     VStack {
                         RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
