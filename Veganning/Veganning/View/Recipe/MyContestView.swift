@@ -176,49 +176,10 @@ struct MyContestView: View {
                     .padding()
                 }
                 
-                // Bottom Navigation
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: RecipeMainView()) {
-                        Text("레시피")
-                            .font(
-                                Font.custom("Pretendard", size: 14)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(.black)
-                            
-                    }
-                    Spacer()
-                    Button(action: {
-                        selectedTab = 1
-                    }) {
-                        Image("logo")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 10)
-                    }
-                    Spacer()
-                    Button(action: {
-                        selectedTab = 2
-                    }) {
-                        Text("MY")
-                            .font(
-                                Font.custom("Pretendard", size: 14)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(.black)
-                    }
-                    Spacer()
-                }
-                .padding(.vertical, 10)
-                .background(Color(.systemGray5))
-                .cornerRadius(30)
-                .shadow(radius: 10)
+
             }
            
-        }.navigationBarBackButtonHidden()
+        }
     }
 }
 

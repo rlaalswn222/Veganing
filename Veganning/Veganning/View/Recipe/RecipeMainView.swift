@@ -7,40 +7,39 @@ struct RecipeMainView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) { // VStack에 spacing을 0으로 설정
-                           // Search Bar
-                           HStack {
-                               ZStack {
-                                   Rectangle()
-                                       .foregroundColor(.clear)
-                                       .frame(height: 45)
-                                       .background(Color.white)
-                                       .cornerRadius(7)
-                                       
-                                   HStack {
-                                       TextField("‘두부면’ 검색하여 두부면 식단 찾아보기", text: .constant(""))
-                                           .padding(.leading, 10)
-                                           .padding(.vertical, 8)
-                    
+            VStack(spacing: 0) {
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(height: 45)
+                            .background(Color.white)
+                            .cornerRadius(7)
                         
-                                       
-                                       Spacer()
-                                       
-                                       Button(action: {
-                                           // 검색 버튼 클릭 액션
-                                       }) {
-                                           Image(systemName: "magnifyingglass")
-                                               .foregroundColor(.black)
-                                               .padding(.trailing, 10)
-                                       }
-                                   }
-                                   .padding(.horizontal, 10)
-                               }
-                               .padding(.horizontal)
-                               .padding(.top, 10)
-                               .background(Color.main)
-                           }
-                           
+                        HStack {
+                            TextField("‘두부면’ 검색하여 두부면 식단 찾아보기", text: .constant(""))
+                                .padding(.leading, 10)
+                                .padding(.vertical, 8)
+                            
+                            
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // 검색 버튼 클릭 액션
+                            }) {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 10)
+                            }
+                        }
+                        .padding(.horizontal, 10)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 10)
+                    .background(Color.main)
+                }
+                
                 // Tabs
                 HStack {
                     Spacer()
@@ -71,7 +70,7 @@ struct RecipeMainView: View {
                 }
                 .padding()
                 .background(Color.main)
-
+                
                 
                 // Filter Bar
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -164,7 +163,7 @@ struct RecipeMainView: View {
                     .padding(.horizontal)
                     .padding(10)
                 }
-
+                
                 // Recipe List
                 ScrollView {
                     VStack {
@@ -175,49 +174,10 @@ struct RecipeMainView: View {
                     .padding()
                 }
                 
-                // Bottom Navigation
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: RecipeMainView()) {
-                        Text("레시피")
-                            .font(
-                                Font.custom("Pretendard", size: 14)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(.black)
-                            
-                    }
-                    Spacer()
-                    Button(action: {
-                        selectedTab = 1
-                    }) {
-                        Image("logo")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 10)
-                    }
-                    Spacer()
-                    Button(action: {
-                        selectedTab = 2
-                    }) {
-                        Text("MY")
-                            .font(
-                                Font.custom("Pretendard", size: 14)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(.black)
-                    }
-                    Spacer()
-                }
-                .padding(.vertical, 10)
-                .background(Color(.systemGray5))
-                .cornerRadius(30)
-                .shadow(radius: 10)
+                
             }
-           
-        }.navigationBarBackButtonHidden()
+            
+        }
     }
 }
 
@@ -307,7 +267,7 @@ struct RecipeCard: View {
                 VStack(alignment: .leading) {
                     let text = "2. 볶아둔 재료를 부친 두부전에 골고루 넣어준다"
                     let count = text.count
-
+                    
                     Text(title)
                         .font(.headline)
                         .padding(.bottom, 4)
