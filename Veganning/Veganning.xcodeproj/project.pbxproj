@@ -20,6 +20,7 @@
 		5847F1172C5CFAC9001AC04E /* VeganningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1162C5CFAC9001AC04E /* VeganningTests.swift */; };
 		5847F1212C5CFAC9001AC04E /* VeganningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1202C5CFAC9001AC04E /* VeganningUITests.swift */; };
 		5847F1232C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */; };
+		58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316392C68E111001374EC /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5847F11C2C5CFAC9001AC04E /* VeganningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeganningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847F1202C5CFAC9001AC04E /* VeganningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningUITests.swift; sourceTree = "<group>"; };
 		5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58C316392C68E111001374EC /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		52D6C9822C5D0A2B00EB505B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				58C316382C68E0F0001374EC /* MainTab */,
 				52D6C9832C5D0A3600EB505B /* Recipe */,
 			);
 			path = View;
@@ -159,6 +162,14 @@
 				5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */,
 			);
 			path = VeganningUITests;
+			sourceTree = "<group>";
+		};
+		58C316382C68E0F0001374EC /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				58C316392C68E111001374EC /* CustomTabView.swift */,
+			);
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 				529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */,
 				5232A51A2C63D29D00B344E9 /* MyContestEditView.swift in Sources */,
 				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
+				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
 				5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */,
 				529C02CA2C62516600C78438 /* RecipeMainView.swift in Sources */,
 			);
