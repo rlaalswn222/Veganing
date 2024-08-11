@@ -166,15 +166,15 @@ struct MyContestView: View {
                     .padding(10)
                 }
 
-                // Recipe List
-                ScrollView {
-                    VStack {
-                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
-                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
-                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
-                    }
-                    .padding()
-                }
+//                // Recipe List
+//                ScrollView {
+//                    VStack {
+//                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
+//                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
+//                        RecipeCard(title: "그리너리 포케", likes: 25, comments: 5)
+//                    }
+//                    .padding()
+//                }
                 
 
             }
