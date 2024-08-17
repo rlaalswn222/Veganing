@@ -177,6 +177,8 @@
 		52D6C9822C5D0A2B00EB505B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				58C3163F2C68E8ED001374EC /* MyPage */,
+				58C3163C2C68E8BA001374EC /* Home */,
 				58C316382C68E0F0001374EC /* MainTab */,
 				52D6C9832C5D0A3600EB505B /* Recipe */,
 			);
@@ -218,8 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				58C316442C68EC3D001374EC /* Global */,
-				58C3163F2C68E8ED001374EC /* MyPage */,
-				58C3163C2C68E8BA001374EC /* Home */,
 				52D6C9822C5D0A2B00EB505B /* View */,
 				5847F1052C5CFAC8001AC04E /* VeganningApp.swift */,
 				5847F1072C5CFAC8001AC04E /* ContentView.swift */,
@@ -281,7 +281,8 @@
 			children = (
 				58C316402C68E8FC001374EC /* MyPageView.swift */,
 			);
-			path = MyPage;
+			name = MyPage;
+			path = ../MyPage;
 			sourceTree = "<group>";
 		};
 		58C316442C68EC3D001374EC /* Global */ = {
