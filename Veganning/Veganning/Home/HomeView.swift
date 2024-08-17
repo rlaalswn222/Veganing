@@ -23,7 +23,7 @@ struct HomeView: View {
             ZStack {
                 Image("homeBack")
                     .resizable()
-                    .frame(maxWidth: .infinity, maxHeight: 630)
+                    .frame(maxWidth: .infinity, maxHeight: 530)
                     .clipped()
                 VStack(alignment: .leading) {
                     HomeTagsView()
@@ -33,11 +33,17 @@ struct HomeView: View {
                     Text("TODAY| 240715 D+37")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.leading,50)
                     Text("have a good vaganing day")
                         .foregroundColor(.white)
                         .font(.system(size: 12))
+                        .padding(.leading,50)
+                        .padding(.bottom,30)
+                    
+                    
                 }
                 
+                Spacer()
             }
             Text("HOT 비건 식당 >")
                 .foregroundColor(.black)

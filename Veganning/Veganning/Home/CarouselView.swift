@@ -12,7 +12,7 @@ struct CarouselView: View {
     let items: [Recipe]
     let sideItemScale: CGFloat = 0.5
     let sideItemAlpha: CGFloat = 0.5
-    let spacing: CGFloat = 10
+    let spacing: CGFloat = 5
 
     @State private var scrollOffset: CGFloat = 0
     @State private var selectedIndex: Int = 1
@@ -43,7 +43,7 @@ struct CarouselView: View {
                             }
                     )
                 }
-                .frame(width: geometry.size.width, height: 360)
+                .frame(width: geometry.size.width, height: 370)
                 .onAppear {
                     withAnimation {
                         scrollViewProxy.scrollTo(selectedIndex, anchor: .center)
