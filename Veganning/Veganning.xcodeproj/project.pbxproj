@@ -28,6 +28,12 @@
 		58C316482C68FD5E001374EC /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316472C68FD5E001374EC /* FilterBar.swift */; };
 		58C3164A2C6900B5001374EC /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316492C6900B5001374EC /* RecipeCardView.swift */; };
 		58C3164C2C6900E8001374EC /* RecipeCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C3164B2C6900E8001374EC /* RecipeCardModel.swift */; };
+		58C316602C6B5A54001374EC /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 58C3165F2C6B5A54001374EC /* CollectionViewPagingLayout */; };
+		58C316682C709AA0001374EC /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316672C709AA0001374EC /* CarouselView.swift */; };
+		58C3166A2C709AFB001374EC /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316692C709AFB001374EC /* HomeCardView.swift */; };
+		58C3166C2C70A456001374EC /* HomeTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C3166B2C70A456001374EC /* HomeTagsView.swift */; };
+		58F6BCBF2C70AB8400487694 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6BCBE2C70AB8400487694 /* Tags.swift */; };
+		58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6BCC02C70BFC800487694 /* CustomRoundedRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,11 @@
 		58C316472C68FD5E001374EC /* FilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBar.swift; sourceTree = "<group>"; };
 		58C316492C6900B5001374EC /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		58C3164B2C6900E8001374EC /* RecipeCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardModel.swift; sourceTree = "<group>"; };
+		58C316672C709AA0001374EC /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		58C316692C709AFB001374EC /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		58C3166B2C70A456001374EC /* HomeTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTagsView.swift; sourceTree = "<group>"; };
+		58F6BCBE2C70AB8400487694 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
+		58F6BCC02C70BFC800487694 /* CustomRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C316602C6B5A54001374EC /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				58C3163D2C68E8E7001374EC /* HomeView.swift */,
+				58C316672C709AA0001374EC /* CarouselView.swift */,
+				58C316692C709AFB001374EC /* HomeCardView.swift */,
+				58C3166B2C70A456001374EC /* HomeTagsView.swift */,
+				58F6BCBE2C70AB8400487694 /* Tags.swift */,
+				58F6BCC02C70BFC800487694 /* CustomRoundedRectangle.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -249,6 +266,9 @@
 			dependencies = (
 			);
 			name = Veganning;
+			packageProductDependencies = (
+				58C3165F2C6B5A54001374EC /* CollectionViewPagingLayout */,
+			);
 			productName = Veganning;
 			productReference = 5847F1022C5CFAC8001AC04E /* Veganning.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +341,9 @@
 				Base,
 			);
 			mainGroup = 5847F0F92C5CFAC8001AC04E;
+			packageReferences = (
+				58C3165E2C6B5A54001374EC /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+			);
 			productRefGroup = 5847F1032C5CFAC8001AC04E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -368,8 +391,12 @@
 				529C02CE2C629B0200C78438 /* MyContestView.swift in Sources */,
 				58C3164C2C6900E8001374EC /* RecipeCardModel.swift in Sources */,
 				52D6C9812C5D05FF00EB505B /* RecipeDetailView.swift in Sources */,
+				58C3166A2C709AFB001374EC /* HomeCardView.swift in Sources */,
 				58C3163E2C68E8E7001374EC /* HomeView.swift in Sources */,
 				58C316432C68E946001374EC /* TabbedView.swift in Sources */,
+				58F6BCBF2C70AB8400487694 /* Tags.swift in Sources */,
+				58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */,
+				58C316682C709AA0001374EC /* CarouselView.swift in Sources */,
 				529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */,
 				5232A51A2C63D29D00B344E9 /* MyContestEditView.swift in Sources */,
 				58C316412C68E8FC001374EC /* MyPageView.swift in Sources */,
@@ -379,6 +406,7 @@
 				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
 				5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */,
 				529C02CA2C62516600C78438 /* RecipeMainView.swift in Sources */,
+				58C3166C2C70A456001374EC /* HomeTagsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +736,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58C3165E2C6B5A54001374EC /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58C3165F2C6B5A54001374EC /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58C3165E2C6B5A54001374EC /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5847F0FA2C5CFAC8001AC04E /* Project object */;
 }
