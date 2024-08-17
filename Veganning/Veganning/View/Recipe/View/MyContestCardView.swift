@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct RecipeCardView: View {
-    var recipe: RecipeCardModel
+struct MyContestCardView: View {
+    var contest : MyContestCardModel
     
     @State private var isCommentButtonTapped = false
     @State private var isLikeButtonTapped = false
@@ -10,7 +10,7 @@ struct RecipeCardView: View {
         VStack {
             ZStack(alignment: .topLeading) {
                 
-                if let recipeImage = recipe.recipeImage {
+                if let recipeImage = contest.MCrecipeImage {
                     Image(uiImage: recipeImage)
                         .resizable()
                         .scaledToFill()
@@ -105,10 +105,10 @@ struct RecipeCardView: View {
                 let text = "2. 볶아둔 재료를 부친 두부전에 골고루 넣어준다"
                 let count = text.count
                 
-                Text(recipe.title)
+                Text(contest.MCtitle)
                     .font(.headline)
                     .padding(.bottom, 4)
-                Text(recipe.recipedetail)
+                Text(contest.MCrecipedetail)
                     .font(Font.custom("NanumSquare Neo OTF", size: 12))
                     .foregroundColor(Color(red: 0.51, green: 0.51, blue: 0.51))
                 
@@ -140,5 +140,4 @@ struct RecipeCardView: View {
         .navigationBarBackButtonHidden()
     }
 }
-
 
