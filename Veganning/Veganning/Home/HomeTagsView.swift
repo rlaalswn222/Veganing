@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeTagsView: Viaaaaew {
+struct HomeTagsView: View {
     @State private var selectedTag: Tags = Tags.all
     
     var body: some View {
