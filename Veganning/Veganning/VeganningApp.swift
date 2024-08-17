@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct VeganningApp: App {
-    
+
     var body: some Scene {
         WindowGroup {
-            RecipeMainView()
+            TabbedView()
         }
     }
 }

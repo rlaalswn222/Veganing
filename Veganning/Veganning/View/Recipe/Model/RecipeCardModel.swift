@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct RecipeCardModel: Identifiable {
     let id = UUID()
     var title: String

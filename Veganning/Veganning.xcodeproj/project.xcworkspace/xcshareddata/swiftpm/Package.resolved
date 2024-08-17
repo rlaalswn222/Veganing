@@ -1,0 +1,15 @@
+{
+  "originHash" : "f1f683bd84d2e3a9650e24233f0234f6e3aee40be3ea33975c7cd09c1b057da9",
+  "pins" : [
+    {
+      "identity" : "collectionviewpaginglayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/amirdew/CollectionViewPagingLayout.git",
+      "state" : {
+        "revision" : "4bdec327535470c8d9765d190625b13e99b87db5",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
