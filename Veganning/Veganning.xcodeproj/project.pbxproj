@@ -33,6 +33,12 @@
 		58299AE32C7599DD001BBF0F /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AE22C7599DD001BBF0F /* RestaurantView.swift */; };
 		58299AE52C75C099001BBF0F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AE42C75C099001BBF0F /* Location.swift */; };
 		58299AE72C75F9CF001BBF0F /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AE62C75F9CF001BBF0F /* TagsView.swift */; };
+		58299AEC2C761959001BBF0F /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AEB2C761959001BBF0F /* GeneralAPI.swift */; };
+		58299AEE2C761A65001BBF0F /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AED2C761A65001BBF0F /* HomeAPI.swift */; };
+		58299AF02C761A70001BBF0F /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AEF2C761A70001BBF0F /* RecipeAPI.swift */; };
+		58299AF22C761A84001BBF0F /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AF12C761A84001BBF0F /* MyPageAPI.swift */; };
+		58299AF42C761A8F001BBF0F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AF32C761A8F001BBF0F /* HomeService.swift */; };
+		58299AF62C761A9D001BBF0F /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AF52C761A9C001BBF0F /* RecipeService.swift */; };
 		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
 		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
 		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
@@ -97,6 +103,12 @@
 		58299AE22C7599DD001BBF0F /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		58299AE42C75C099001BBF0F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		58299AE62C75F9CF001BBF0F /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		58299AEB2C761959001BBF0F /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		58299AED2C761A65001BBF0F /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		58299AEF2C761A70001BBF0F /* RecipeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
+		58299AF12C761A84001BBF0F /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
+		58299AF32C761A8F001BBF0F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		58299AF52C761A9C001BBF0F /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		5847F1022C5CFAC8001AC04E /* Veganning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847F1052C5CFAC8001AC04E /* VeganningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningApp.swift; sourceTree = "<group>"; };
 		5847F1072C5CFAC8001AC04E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,6 +224,35 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		58299AE82C761906001BBF0F /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				58299AEA2C76192A001BBF0F /* GlobalAPI */,
+				58299AE92C761921001BBF0F /* Model */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		58299AE92C761921001BBF0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58299AEA2C76192A001BBF0F /* GlobalAPI */ = {
+			isa = PBXGroup;
+			children = (
+				58299AEB2C761959001BBF0F /* GeneralAPI.swift */,
+				58299AED2C761A65001BBF0F /* HomeAPI.swift */,
+				58299AEF2C761A70001BBF0F /* RecipeAPI.swift */,
+				58299AF12C761A84001BBF0F /* MyPageAPI.swift */,
+				58299AF32C761A8F001BBF0F /* HomeService.swift */,
+				58299AF52C761A9C001BBF0F /* RecipeService.swift */,
+			);
+			path = GlobalAPI;
+			sourceTree = "<group>";
+		};
 		5847F0F92C5CFAC8001AC04E = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +277,7 @@
 		5847F1042C5CFAC8001AC04E /* Veganning */ = {
 			isa = PBXGroup;
 			children = (
+				58299AE82C761906001BBF0F /* Networks */,
 				58C316442C68EC3D001374EC /* Global */,
 				52D6C9822C5D0A2B00EB505B /* View */,
 				5847F1052C5CFAC8001AC04E /* VeganningApp.swift */,
@@ -465,11 +507,14 @@
 				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
 				5232A52F2C6902EB00B344E9 /* RecipeDetailView.swift in Sources */,
 				58C3166A2C709AFB001374EC /* HomeCardView.swift in Sources */,
+				58299AF62C761A9D001BBF0F /* RecipeService.swift in Sources */,
 				58C3163E2C68E8E7001374EC /* HomeView.swift in Sources */,
 				58C316432C68E946001374EC /* TabbedView.swift in Sources */,
+				58299AF22C761A84001BBF0F /* MyPageAPI.swift in Sources */,
 				58F6BCBF2C70AB8400487694 /* Tags.swift in Sources */,
 				58299ADD2C739830001BBF0F /* Restaurant.swift in Sources */,
 				58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */,
+				58299AEC2C761959001BBF0F /* GeneralAPI.swift in Sources */,
 				58C316682C709AA0001374EC /* CarouselView.swift in Sources */,
 				58299AE72C75F9CF001BBF0F /* TagsView.swift in Sources */,
 				529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */,
@@ -483,13 +528,16 @@
 				523BC5F92C6B4198007CDFA2 /* RecipeStepView.swift in Sources */,
 				5232A5272C68FFF000B344E9 /* ContestFilterBar.swift in Sources */,
 				5232A5212C68F84A00B344E9 /* RecipeCardView.swift in Sources */,
+				58299AF02C761A70001BBF0F /* RecipeAPI.swift in Sources */,
 				58299AE32C7599DD001BBF0F /* RestaurantView.swift in Sources */,
+				58299AEE2C761A65001BBF0F /* HomeAPI.swift in Sources */,
 				523BC5F02C6B301B007CDFA2 /* MyContestCardModel.swift in Sources */,
 				5232A5292C69012F00B344E9 /* RecipeCardModel.swift in Sources */,
 				58C316412C68E8FC001374EC /* MyPageView.swift in Sources */,
 				58C316462C68EC56001374EC /* RoundedCornersShape.swift in Sources */,
 				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
 				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
+				58299AF42C761A8F001BBF0F /* HomeService.swift in Sources */,
 				5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */,
 				523BC5E12C6A5050007CDFA2 /* RecipeDetailCardModel.swift in Sources */,
 				523BC5FC2C6B4542007CDFA2 /* ContestFinishPopup.swift in Sources */,
