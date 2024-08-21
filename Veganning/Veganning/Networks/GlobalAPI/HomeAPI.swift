@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum HomeAPI {
-    
+    case weeklyStore //이번주 hot 비건식당 4개
 }
 
 extension HomeAPI: TargetType {
@@ -23,16 +23,26 @@ extension HomeAPI: TargetType {
     }
     
     var path: String {
-        
+        switch self {
+        case .weeklyStore:
+            return "/home/weekly/store"
+        }
     }
     
     var method: Moya.Method {
-        
+        switch self {
+        case .weeklyStore:
+            return .get
+        }
     }
     
     var task: Moya.Task {
-        
+        switch self {
+        case .weeklyStore:
+            return .requestPlain
+        }
     }
     
 }
+
 
