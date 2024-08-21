@@ -101,7 +101,19 @@ struct HomeView: View {
                                 
                                 HStack {
                                     Text("리뷰 평점")
-                                    
+                                        .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+                                        .foregroundColor(.grey4)
+                                        .frame(width: 40,height: 14)
+                                    ForEach(0..<restaurant.review, id: \.self) {_ in
+                                        Image("fillStar")
+                                            .resizable()
+                                            .frame(width: 10,height: 10)
+                                    }
+                                    ForEach(restaurant.review..<5, id:\.self) {_ in 
+                                        Image("star")
+                                            .resizable()
+                                            .frame(width: 10,height: 10)
+                                    }
                                 }
                             }
                             .padding()
