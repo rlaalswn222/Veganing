@@ -81,7 +81,7 @@ struct RecipeMainView: View {
                     // 조건부 뷰 표시
                     if selectedTab == 1 {
                         // 레시피 목록 뷰
-                        List(recipeData.recipes) { recipe in
+                        List(recipeData.recipes) { recipe in // 여기서 recipeData.recipes 사용
                             RecipeCardView(recipe: recipe)
                                 .padding(.vertical, 15)
                                 .background(Color.white)

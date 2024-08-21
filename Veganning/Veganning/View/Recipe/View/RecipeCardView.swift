@@ -10,20 +10,12 @@ struct RecipeCardView: View {
         VStack {
             ZStack(alignment: .topLeading) {
                 
-                if let recipeImage = recipe.recipeImage {
-                    Image(uiImage: recipeImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 120)
-                        .clipped()
-                } else {
-                    // 기본 이미지 표시
-                    Image(systemName: "food_image")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 120)
-                        .clipped()
-                }
+                // 조건부 바인딩을 제거하고 그냥 사용
+                Image(recipe.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 120)
+                    .clipped()
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -105,10 +97,10 @@ struct RecipeCardView: View {
                 let text = "2. 볶아둔 재료를 부친 두부전에 골고루 넣어준다"
                 let count = text.count
                 
-                Text(recipe.title)
+                Text(recipe.name)
                     .font(.headline)
                     .padding(.bottom, 4)
-                Text(recipe.recipedetail)
+                Text(recipe.description_1)
                     .font(Font.custom("NanumSquare Neo OTF", size: 12))
                     .foregroundColor(Color(red: 0.51, green: 0.51, blue: 0.51))
                 
@@ -140,5 +132,4 @@ struct RecipeCardView: View {
         .navigationBarBackButtonHidden()
     }
 }
-
 

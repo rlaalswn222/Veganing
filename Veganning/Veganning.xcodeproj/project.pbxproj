@@ -42,6 +42,8 @@
 		52A9DFB62C76503900A22AC2 /* RecipeReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9DFB52C76503900A22AC2 /* RecipeReviewResponse.swift */; };
 		52A9DFB82C76519E00A22AC2 /* RecipeReviewWriteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9DFB72C76519E00A22AC2 /* RecipeReviewWriteRequest.swift */; };
 		52A9DFBA2C7651AD00A22AC2 /* RecipeReviewWriteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9DFB92C7651AD00A22AC2 /* RecipeReviewWriteResponse.swift */; };
+		52A9DFC82C7681A700A22AC2 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9DFC72C7681A700A22AC2 /* RecipeViewModel.swift */; };
+		52A9DFCB2C7684F900A22AC2 /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9DFCA2C7684F900A22AC2 /* RecipeDetailViewModel.swift */; };
 		58299ADD2C739830001BBF0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299ADC2C739830001BBF0F /* Restaurant.swift */; };
 		58299AE32C7599DD001BBF0F /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AE22C7599DD001BBF0F /* RestaurantView.swift */; };
 		58299AE52C75C099001BBF0F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299AE42C75C099001BBF0F /* Location.swift */; };
@@ -144,6 +146,8 @@
 		52A9DFB52C76503900A22AC2 /* RecipeReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeReviewResponse.swift; sourceTree = "<group>"; };
 		52A9DFB72C76519E00A22AC2 /* RecipeReviewWriteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeReviewWriteRequest.swift; sourceTree = "<group>"; };
 		52A9DFB92C7651AD00A22AC2 /* RecipeReviewWriteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeReviewWriteResponse.swift; sourceTree = "<group>"; };
+		52A9DFC72C7681A700A22AC2 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		52A9DFCA2C7684F900A22AC2 /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
 		58299ADC2C739830001BBF0F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		58299AE22C7599DD001BBF0F /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		58299AE42C75C099001BBF0F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -274,7 +278,12 @@
 		52D6C9832C5D0A3600EB505B /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				58299B332C7677FD001BBF0F /* ViewModel */,
+=======
+				52A9DFC72C7681A700A22AC2 /* RecipeViewModel.swift */,
+				52A9DFCA2C7684F900A22AC2 /* RecipeDetailViewModel.swift */,
+>>>>>>> Stashed changes
 				523BC5F12C6B3ED6007CDFA2 /* ImagePicker.swift */,
 				523BC5DF2C690385007CDFA2 /* Model */,
 				523BC5DE2C690374007CDFA2 /* View */,
@@ -645,7 +654,11 @@
 				58299AF22C761A84001BBF0F /* MyPageAPI.swift in Sources */,
 				58F6BCBF2C70AB8400487694 /* Tags.swift in Sources */,
 				58299ADD2C739830001BBF0F /* Restaurant.swift in Sources */,
+<<<<<<< Updated upstream
 				58299B352C767810001BBF0F /* RecipeViewModel.swift in Sources */,
+=======
+				52A9DFC82C7681A700A22AC2 /* RecipeViewModel.swift in Sources */,
+>>>>>>> Stashed changes
 				58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */,
 				58299B052C7620A0001BBF0F /* RecipeListRequest.swift in Sources */,
 				58299B322C76766B001BBF0F /* RecipeSaveModel.swift in Sources */,
@@ -654,6 +667,7 @@
 				58299B292C767605001BBF0F /* RetaurantModel.swift in Sources */,
 				58299AEC2C761959001BBF0F /* GeneralAPI.swift in Sources */,
 				58C316682C709AA0001374EC /* CarouselView.swift in Sources */,
+				52A9DFCB2C7684F900A22AC2 /* RecipeDetailViewModel.swift in Sources */,
 				58299AE72C75F9CF001BBF0F /* TagsView.swift in Sources */,
 				52A9DFB42C764F0800A22AC2 /* ReviewStarResponse.swift in Sources */,
 				529C02CC2C62641300C78438 /* RecipeReviewView.swift in Sources */,
