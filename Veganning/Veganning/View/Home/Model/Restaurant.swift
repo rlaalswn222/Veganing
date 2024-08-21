@@ -8,12 +8,10 @@
 import Foundation
 
 struct Restaurant: Identifiable {
-    let id : Int
-    let name : String
-    let address : String
-    let open: String
-    let rating : Int
-    let isOpen: Bool
+    let id = UUID()
+    let title : String
+    let location : String
     let image : String
-
+    let ing: String
+    let review : Int
 }
