@@ -66,4 +66,6 @@ class RecipeService {
             completion(.failure(.unhandledStatusCode(response.statusCode)))
         }
     }
+    
+    //MARK: 레시피 리스트 진입 화면 
 }
