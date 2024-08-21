@@ -28,6 +28,7 @@ struct HomeView: View {
         Recipe(title: "Green POKE"),
         Recipe(title: "Another Recipe")
     ]
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -39,21 +40,22 @@ struct HomeView: View {
                             .clipped()
                         VStack(alignment: .leading) {
                             HomeTagsView()
-                                .padding(.top,50)
+                                .padding(.top, 50)
                             CarouselView(items: recipes)
-                                .padding(.top,-20)
+                                .padding(.top, -20)
                             Text("TODAY| 240715 D+37")
                                 .foregroundColor(.white)
                                 .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.bold))
-                                .padding(.leading,50)
+                                .padding(.leading, 50)
                             Text("have a good vaganing day")
                                 .foregroundColor(.white)
                                 .font(Font.custom("NanumSquare Neo OTF", size: 12).weight(.bold))
-                                .padding(.leading,50)
-                                .padding(.bottom,30)
+                                .padding(.leading, 50)
+                                .padding(.bottom, 30)
                         }
                         Spacer()
                     }
+                    
                     VStack(alignment: .center) {
                         HStack {
                             Text("HOT 비건 식당")
@@ -67,7 +69,7 @@ struct HomeView: View {
                             }
                         }
                         .padding(.horizontal)
-                        .padding(.top,20)
+                        .padding(.top, 20)
                         Text("5월 3주차")
                             .font(Font.custom("NanumSquare Neo OTF", size: 12))
                             .foregroundColor(.black)
@@ -128,8 +130,9 @@ struct HomeView: View {
                         .padding()
                     }
                 }
-                .edgesIgnoringSafeArea(.all)
-            }}
+            }
+            .navigationBarBackButtonHidden()
+        }
         .scrollIndicators(.hidden)
     }
 }
