@@ -14,9 +14,9 @@ struct RecipeDetailView: View {
     
     // 샘플 데이터 (레시피의 단계별 설명)
     let detailModels = [
-        RecipeDetailCardModel(dttitle: "1. 피망을 손질해주세요.", dtrecipeImage: nil, dtrecipedetail: "피망을 잘게 썰어줍니다.", dtImageName: "food_image"),
-        RecipeDetailCardModel(dttitle: "2. 양파를 썰어주세요.", dtrecipeImage: nil, dtrecipedetail: "양파를 얇게 채썰어줍니다.", dtImageName: "food_image"),
-        RecipeDetailCardModel(dttitle: "3. 토마토를 준비해주세요.", dtrecipeImage: nil, dtrecipedetail: "토마토를 작게 잘라줍니다.", dtImageName: "food_image")
+        RecipeDetailCardModel(dttitle: "1. 피망을 손질해주세요.", dtrecipeImage: nil, dtrecipedetail: "피망을 잘게 썰어줍니다.", dtImageName: "pimento1"),
+        RecipeDetailCardModel(dttitle: "2. 양파를 썰어주세요.", dtrecipeImage: nil, dtrecipedetail: "양파를 얇게 채썰어줍니다.", dtImageName: "pimento1"),
+        RecipeDetailCardModel(dttitle: "3. 토마토를 준비해주세요.", dtrecipeImage: nil, dtrecipedetail: "토마토를 작게 잘라줍니다.", dtImageName: "pimento1")
     ]
     
     let recommendModels = [

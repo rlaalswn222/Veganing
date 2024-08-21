@@ -5,7 +5,6 @@ struct RecipeContest: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    // 팝업창 표시를 위한 상태 변수
     @State private var showSubmitPopup = false
     
     @State private var isEditingTitle = false
@@ -30,19 +29,12 @@ struct RecipeContest: View {
             ScrollView {
                 VStack(spacing: 0) {
                     ZStack(alignment: .topLeading) {
-                        if let selectedImage = selectedImage {
-                            Image(uiImage: selectedImage) // 사용자가 선택한 이미지를 표시
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 416)
-                                .clipped()
-                        } else {
-                            Image("food_image") // 기본 배경 이미지
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 416)
-                                .clipped()
-                        }
+                        // selectedImage만 변경되도록 처리하고 aspectRatio 추가
+                        Image(uiImage: selectedImage ?? UIImage(named: "food_image")!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill) // 이미지 비율 유지
+                            .frame(height: 416)
+                            .clipped()
                         
                         HStack {
                             // 뒤로 가기 버튼
@@ -138,7 +130,7 @@ struct RecipeContest: View {
                             }
                         }
                     }
-                    .frame(height: 416)
+                    .frame(height: 416) // 이미지 프레임 고정
                     
                     Spacer()
                     

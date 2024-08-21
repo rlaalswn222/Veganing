@@ -28,83 +28,46 @@ struct RecipeStepView: View {
             
             ForEach(steps.indices, id: \.self) { index in
                 VStack {
-                    ZStack {
+                    ZStack(alignment: .topTrailing) {
                         if let image = steps[index].image {
                             Image(uiImage: image)
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
                                 .frame(height: 150)
                                 .cornerRadius(10)
-                                .overlay(
-                                    HStack {
-                                        VStack {
-                                            Button(action: {
-                                                steps.remove(at: index)
-                                            }) {
-                                                Image(systemName: "minus.circle")
-                                                    .resizable()
-                                                    .frame(width: 20, height: 20)
-                                                    .foregroundColor(.sub1)
-                                            }
-                                            .padding()
-                                            Spacer()
-                                            Button(action: {
-                                                currentStepIndex = index
-                                                showImagePicker = true
-                                            }) {
-                                                Image(systemName: "camera")
-                                                    .resizable()
-                                                    .frame(width: 20, height: 20)
-                                                    .foregroundColor(.sub1)
-                                            }
-                                            .padding()
-                                        }
-                                    }
-                                )
+                                .clipped()
                         } else {
                             Rectangle()
                                 .fill(Color.gray.opacity(0.3))
                                 .frame(height: 150)
                                 .cornerRadius(10)
-                                .overlay(
-                                    HStack {
-                                        Spacer()
-                                        VStack {
-                                            Button(action: {
-                                                steps.remove(at: index)
-                                            }) {
-                                                Image(systemName: "minus")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .padding(6)
-                                                    .frame(width: 30, height: 30)
-                                                    .foregroundColor(.sub1)
-                                                    .background(Circle().fill(Color.grey5))
-                                                    .overlay(
-                                                        Circle()
-                                                            .stroke(Color.sub1, lineWidth: 2)
-                                                    )
-                                            }
-                                            Spacer()
-                                            Button(action: {
-                                                currentStepIndex = index
-                                                showImagePicker = true
-                                            }) {
-                                                Image(systemName: "camera")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .padding(6)
-                                                    .frame(width: 30, height: 30)
-                                                    .foregroundColor(.sub1)
-                                                    .background(Circle().fill(Color.grey5))
-                                                    .overlay(
-                                                        Circle()
-                                                            .stroke(Color.sub1, lineWidth: 2)
-                                                    )
-                                            }
-                                        }
-                                    }.padding()
-                                )
+                        }
+                        
+                        VStack {
+                            Button(action: {
+                                steps.remove(at: index)
+                            }) {
+                                Image(systemName: "minus.circle")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.sub1)
+                            }
+                            .padding(.top, 8)
+                            .padding(.trailing, 8)
+                            
+
+                            
+                            Button(action: {
+                                currentStepIndex = index
+                                showImagePicker = true
+                            }) {
+                                Image(systemName: "camera")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.sub1)
+                            }
+                            .padding(.bottom, 8)
+                            .padding(.trailing, 8)
                         }
                     }
 
@@ -130,9 +93,11 @@ struct RecipeStepView: View {
 
 struct RecipeStepView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeStepView(steps: .constant([Step(description: "1. 내용을 입력해주세요", detail: "상세 설명 내용을 적어주세요", image: nil)]),
-                       currentStepIndex: .constant(nil),
-                       showImagePicker: .constant(false))
+        RecipeStepView(
+            steps: .constant([Step(description: "1. 내용을 입력해주세요", detail: "상세 설명 내용을 적어주세요", image: nil)]),
+            currentStepIndex: .constant(nil),
+            showImagePicker: .constant(false)
+        )
     }
 }
 
