@@ -89,7 +89,7 @@ struct HomeView: View {
                                             .clipShape(Circle())
                                             .overlay(Circle().stroke(Color.white, lineWidth: 2))
                                     } else {
-                                        Image(systemName: "photo")
+                                        Image("restaurant1")
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 100, height: 100)

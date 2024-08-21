@@ -285,14 +285,6 @@
 			path = GlobalAPI;
 			sourceTree = "<group>";
 		};
-		58299B202C763C91001BBF0F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				58299B1E2C763C8D001BBF0F /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		5847F0F92C5CFAC8001AC04E = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +358,7 @@
 		58C3163C2C68E8BA001374EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				58299B202C763C91001BBF0F /* ViewModel */,
+				58299B1E2C763C8D001BBF0F /* HomeViewModel.swift */,
 				58299ADB2C7397FD001BBF0F /* Model */,
 				58C3163D2C68E8E7001374EC /* HomeView.swift */,
 				58C316672C709AA0001374EC /* CarouselView.swift */,
