@@ -9,7 +9,8 @@ import Foundation
 
 struct BaseResponse<T: Codable>: Codable {
     let isSuccess: Bool
-    let code: String
-    let message: String
-    let result: T?
+    let code: Int
+    let status: String
+    let data: T?
+    let message: String?
 }

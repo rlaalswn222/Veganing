@@ -4,6 +4,9 @@
 //
 //  Created by 김민솔 on 8/17/24.
 //
+//  HomeView.swift
+//  Veganning
+
 import SwiftUI
 
 struct Recipe: Identifiable {
@@ -12,17 +15,13 @@ struct Recipe: Identifiable {
 }
 
 struct HomeView: View {
-    let restaurants = [
-        Restaurant(title: "Vegan Delight", location: "Seoul", image: "restaurant1", ing: "12:00 ~ 21:30", review: 3),
-        Restaurant(title: "Green Bites", location: "Busan", image: "restaurant2", ing: "12:00 ~ 21:30", review: 2),
-        Restaurant(title: "Healthy Feast", location: "Daegu", image: "restaurant3", ing: "12:00 ~ 21:30", review: 5),
-        Restaurant(title: "Plant Power", location: "Incheon", image: "restaurant4", ing: "12:00 ~ 21:30", review: 4)
-    ]
+    @StateObject private var viewModel = HomeViewModel()
     
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
+    
     let recipes = [
         Recipe(title: "Other POKE"),
         Recipe(title: "Green POKE"),
@@ -79,28 +78,41 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .padding(.horizontal)
                         
+                        
                         LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(restaurants) { restaurant in
+                            ForEach(viewModel.restaurants) { restaurant in
                                 VStack {
-                                    Image(restaurant.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100, height: 100)
-                                        .clipShape(Circle())
-                                        .overlay(
-                                            Circle().stroke(Color.white, lineWidth: 2)
-                                        )
-                                    Text(restaurant.title)
+                                    if let uiImage = decodeBase64ToUIImage(base64String: restaurant.image) {
+                                        Image(uiImage: uiImage)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 100, height: 100)
+                                            .clipShape(Circle())
+                                            .overlay(
+                                                Circle().stroke(Color.white, lineWidth: 2)
+                                            )
+                                    } else {
+                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 100, height: 100)
+                                            .clipShape(Circle())
+                                            .overlay(
+                                                Circle().stroke(Color.white, lineWidth: 2)
+                                            )
+                                    }
+                                    
+                                    Text(restaurant.name)
                                         .font(Font.custom("NanumSquare Neo OTF", size: 14).bold())
                                         .foregroundColor(.black)
-                                    Text(restaurant.location)
+                                    Text(restaurant.address)
                                         .font(Font.custom("NanumSquare Neo OTF", size: 12))
                                         .foregroundColor(.gray)
                                     HStack {
                                         Text("영업중")
                                             .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                                             .foregroundColor(.main)
-                                        Text(restaurant.ing)
+                                        Text(restaurant.open)
                                             .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                                     }
                                     
@@ -108,16 +120,18 @@ struct HomeView: View {
                                         Text("리뷰 평점")
                                             .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                                             .foregroundColor(.grey4)
-                                            .frame(width: 40,height: 14)
-                                        ForEach(0..<restaurant.review, id: \.self) {_ in
-                                            Image("fillStar")
-                                                .resizable()
-                                                .frame(width: 10,height: 10)
-                                        }
-                                        ForEach(restaurant.review..<5, id:\.self) {_ in
-                                            Image("star")
-                                                .resizable()
-                                                .frame(width: 10,height: 10)
+                                            .frame(width: 45,height: 14)
+                                        HStack {
+                                            ForEach(0..<restaurant.rating, id: \.self) {_ in
+                                                Image("fillStar")
+                                                    .resizable()
+                                                    .frame(width: 10,height: 10)
+                                            }
+                                            ForEach(restaurant.rating..<5, id:\.self) {_ in
+                                                Image("star")
+                                                    .resizable()
+                                                    .frame(width: 10,height: 10)
+                                            }
                                         }
                                     }
                                 }
@@ -128,6 +142,7 @@ struct HomeView: View {
                             }
                         }
                         .padding()
+                        
                     }
                 }
             }
@@ -137,6 +152,15 @@ struct HomeView: View {
     }
 }
 
+// Base64 문자열을 UIImage로 변환하는 헬퍼 함수 (데이터 스킴 제거 포함)
+func decodeBase64ToUIImage(base64String: String) -> UIImage? {
+    // 데이터 스킴 부분("data:image/...;base64,")을 제거
+    let cleanedString = base64String.components(separatedBy: ",").last ?? base64String
+    guard let imageData = Data(base64Encoded: cleanedString) else { return nil }
+    return UIImage(data: imageData)
+}
+
+// 미리보기
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

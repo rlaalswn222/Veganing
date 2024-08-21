@@ -10,7 +10,7 @@ import Moya
 
 class RecipeService {
     static let shared = RecipeService()
-    static let provider = MoyaProvider<RecipeService>()
+    static let provider = MoyaProvider<RecipeAPI>()
     private init() {}
     
     // MARK: - Network Error
@@ -47,13 +47,13 @@ class RecipeService {
             do {
                 let baseResponse = try JSONDecoder().decode(BaseResponse<T>.self, from: response.data)
                 if baseResponse.isSuccess {
-                    if let result = baseResponse.result {
+                    if let result = baseResponse.data {
                         completion(.success(result))
                     } else {
-                        completion(.failure(.customError(baseResponse.message)))
+//                        completion(.failure(.customError(baseResponse.message)))
                     }
                 } else {
-                    completion(.failure(.customError(baseResponse.message)))
+//                    completion(.failure(.customError(baseResponse.message)))
                 }
             } catch {
                 completion(.failure(.decodingError(error)))
