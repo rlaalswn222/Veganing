@@ -6,7 +6,31 @@
 //
 
 import Foundation
+import Moya
 
 enum MyPageAPI {
+    
+}
+
+extension MyPageAPI: TargetType {
+    var headers: [String : String]? {
+        
+    }
+    
+    var baseURL: URL {
+        return URL(string: GeneralAPI.baseURL)!
+    }
+    
+    var path: String {
+        
+    }
+    
+    var method: Moya.Method {
+        
+    }
+    
+    var task: Moya.Task {
+        
+    }
     
 }
