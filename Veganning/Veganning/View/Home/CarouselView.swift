@@ -23,7 +23,7 @@ struct CarouselView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: spacing) {
                         ForEach(items.indices) { index in
-                            HomeCardView(title: items[index].title, subtitle: "This is a subtitle")
+                            HomeCardView(title: items[index].title, subtitle: "정우 비거너닝, 좋은 아침이에요:)\n 오늘 아침은 비건 라따뚜이 식단 어떠세요?")
                                 .frame(width: geometry.size.width * 0.8)
                                 .scaleEffect(scale(for: index, in: geometry.size.width))
                                 .opacity(opacity(for: index, in: geometry.size.width))

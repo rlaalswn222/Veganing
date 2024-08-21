@@ -4,7 +4,7 @@ struct RecipeMainView: View {
     @State private var selectedTab: Int = 1
     @State private var selectedFilter: String = ""
     @State private var isShowingRecipeContest: Bool = false
-    
+    @StateObject private var viewModel = RecipeViewModel()
     @EnvironmentObject var recipeData: RecipeData
     
     var body: some View {
@@ -139,6 +139,9 @@ struct RecipeMainView: View {
                 }
             }
             .navigationBarBackButtonHidden()
+            .onAppear {
+//                viewModel.fetchRestaurants()
+            }
         }
     }
 }

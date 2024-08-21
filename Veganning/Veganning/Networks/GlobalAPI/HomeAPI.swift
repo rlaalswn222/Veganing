@@ -10,6 +10,7 @@ import Moya
 
 enum HomeAPI {
     case weeklyStore //이번주 hot 비건식당 4개
+    //
 }
 
 extension HomeAPI: TargetType {

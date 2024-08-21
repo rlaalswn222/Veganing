@@ -24,7 +24,7 @@ struct HomeView: View {
     
     let recipes = [
         Recipe(title: "Other POKE"),
-        Recipe(title: "Green POKE"),
+        Recipe(title: "비건 라따뚜이"),
         Recipe(title: "Another Recipe")
     ]
     
@@ -42,7 +42,7 @@ struct HomeView: View {
                                 .padding(.top, 50)
                             CarouselView(items: recipes)
                                 .padding(.top, -20)
-                            Text("TODAY| 240715 D+37")
+                            Text("TODAY| 240822 D+37")
                                 .foregroundColor(.white)
                                 .font(Font.custom("NanumSquare Neo OTF", size: 20).weight(.bold))
                                 .padding(.leading, 50)
@@ -69,7 +69,7 @@ struct HomeView: View {
                         }
                         .padding(.horizontal)
                         .padding(.top, 20)
-                        Text("5월 3주차")
+                        Text("8월 4주차")
                             .font(Font.custom("NanumSquare Neo OTF", size: 12))
                             .foregroundColor(.black)
                             .padding(.horizontal)
@@ -80,56 +80,57 @@ struct HomeView: View {
                         
                         LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(viewModel.restaurants) { restaurant in
-                                VStack {
-                                    if let uiImage = decodeBase64ToUIImage(base64String: restaurant.image) {
-                                        Image(uiImage: uiImage)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 100, height: 100)
-                                            .clipShape(Circle())
-                                            .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                                    } else {
-                                        Image("restaurant1")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 100, height: 100)
-                                            .clipShape(Circle())
-                                            .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                                    }
-                                    
-                                    Text(restaurant.name)
-                                        .font(Font.custom("NanumSquare Neo OTF", size: 14).bold())
-                                        .foregroundColor(.black)
-                                    Text(restaurant.address)
-                                        .font(Font.custom("NanumSquare Neo OTF", size: 12))
-                                        .foregroundColor(.gray)
-                                    HStack {
-                                        Text("영업중")
-                                            .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                                            .foregroundColor(.main)
-                                        Text(restaurant.open)
-                                            .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                                    }
-                                    
-                                    HStack {
-                                        Text("리뷰 평점")
-                                            .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                                            .foregroundColor(.grey4)
-                                            .frame(width: 45,height: 14)
+                                NavigationLink(destination: StoreDetailView()) {
+                                    VStack {
+                                        if let uiImage = decodeBase64ToUIImage(base64String: restaurant.image) {
+                                            Image(uiImage: uiImage)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 100, height: 100)
+                                                .clipShape(Circle())
+                                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                        } else {
+                                            Image("restaurant1")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 100, height: 100)
+                                                .clipShape(Circle())
+                                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                        }
+                                        
+                                        Text(restaurant.name)
+                                            .font(Font.custom("NanumSquare Neo OTF", size: 14).bold())
+                                            .foregroundColor(.black)
+                                        Text(restaurant.address)
+                                            .font(Font.custom("NanumSquare Neo OTF", size: 12))
+                                            .foregroundColor(.gray)
                                         HStack {
-                                            ForEach(0..<restaurant.rating, id: \.self) {_ in
-                                                Image("fillStar")
-                                                    .resizable()
-                                                    .frame(width: 10,height: 10)
-                                            }
-                                            ForEach(restaurant.rating..<5, id:\.self) {_ in
-                                                Image("star")
-                                                    .resizable()
-                                                    .frame(width: 10,height: 10)
+                                            Text("영업중")
+                                                .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+                                                .foregroundColor(.main)
+                                            Text(restaurant.open)
+                                                .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+                                        }
+                                        
+                                        HStack {
+                                            Text("리뷰 평점")
+                                                .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+                                                .foregroundColor(.grey4)
+                                                .frame(width: 45,height: 14)
+                                            HStack {
+                                                ForEach(0..<restaurant.rating, id: \.self) {_ in
+                                                    Image("fillStar")
+                                                        .resizable()
+                                                        .frame(width: 10,height: 10)
+                                                }
+                                                ForEach(restaurant.rating..<5, id:\.self) {_ in
+                                                    Image("star")
+                                                        .resizable()
+                                                        .frame(width: 10,height: 10)
+                                                }
                                             }
                                         }
-                                    }
-                                }
+                                    }}
                                 .padding()
                                 .background(Color.white)
                                 .cornerRadius(10)

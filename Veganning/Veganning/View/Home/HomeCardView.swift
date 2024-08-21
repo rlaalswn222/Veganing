@@ -14,8 +14,8 @@ struct HomeCardView: View {
     var body: some View {
         ZStack {
             CustomRoundedRectangle(cornerRadius: 50, corners: [.topRight, .bottomLeft, .bottomRight])
-                .fill(Color.white.opacity(0.2))
-                .blur(radius: 0.2)
+                .fill(Color.grey4.opacity(0.8))
+                .blur(radius: 20)
                 .overlay(
                     CustomRoundedRectangle(cornerRadius: 50, corners: [.topRight, .bottomLeft, .bottomRight])
                         .stroke(Color.white, lineWidth: 1)
@@ -24,30 +24,37 @@ struct HomeCardView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(title)
-                                .font(.largeTitle)
+                                .font(Font.custom("NanumSquare Neo OTF", size: 34).weight(.bold))
                                 .fontWeight(.bold)
                                 .foregroundColor(.sub1)
-                                .padding(.trailing,20)
-                            Image("fillHeart")
-                                .resizable()
-                                .frame(width: 20,height: 20)
+                                .padding(.leading,10)
+                            ZStack {
+                                Circle()
+                                    .fill(Color.black.opacity(0.3))
+                                    .frame(width: 30, height: 30) // Adjust the size as needed
+                                
+                                Image("fillHeart")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 15, height: 15) // Adjust the size as needed
+                            }
                         }
                         .padding(.top, 20)
+                        
                         Text(subtitle)
                             .font(.body)
                             .foregroundColor(.white)
                             .padding(.top, 8)
                         
                         Spacer()
+                        
                         HStack {
-                            Button(action: {
-                                // 버튼 액션
-                            }) {
+                            NavigationLink(destination: RecipeDetailView()) {
                                 Text("레시피 보러가기")
-                                    .font(.system(size: 14,weight: .bold))
+                                    .font(.system(size: 14, weight: .bold))
                                     .foregroundColor(.sub1)
-                                    .padding(.horizontal,18)
-                                    .padding(.vertical,8)
+                                    .padding(.horizontal, 18)
+                                    .padding(.vertical, 8)
                                     .background(
                                         RoundedRectangle(cornerRadius: 10)
                                             .fill(Color.black.opacity(0.7))
@@ -63,15 +70,13 @@ struct HomeCardView: View {
                             Image("Homecard")
                                 .resizable()
                                 .frame(width: 178, height: 200)
-                                .padding(.trailing,-10.488)
+                                .padding(.trailing, -10.488)
                         }
                     }
                 )
         }
     }
 }
-
-
 
 struct HomeCardView_Previews: PreviewProvider {
     static var previews: some View {
