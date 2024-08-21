@@ -30,4 +30,3 @@ struct CookingStep: Codable {
     let description: String
     let image: String
 }
-

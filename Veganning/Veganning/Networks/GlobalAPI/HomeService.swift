@@ -10,7 +10,7 @@ import Moya
 
 class HomeService {
     static let shared = HomeService()
-    static let provider = MoyaProvider<HomeService>()
+    static let provider = MoyaProvider<HomeAPI>()
     private init() {}
     
     // MARK: - Network Error
@@ -47,7 +47,7 @@ class HomeService {
             do {
                 let baseResponse = try JSONDecoder().decode(BaseResponse<T>.self, from: response.data)
                 if baseResponse.isSuccess {
-                    if let result = baseResponse.result {
+                    if let result = baseResponse.data {
                         completion(.success(result))
                     } else {
                         completion(.failure(.customError(baseResponse.message)))
@@ -64,6 +64,17 @@ class HomeService {
             completion(.failure(.forbidden))
         default:
             completion(.failure(.unhandledStatusCode(response.statusCode)))
+        }
+    }
+    
+    func getWeeklyStore(completion: @escaping (Result<[WeeklyStoreResponse], NetworkError>) -> Void) {
+        HomeService.provider.request(.weeklyStore) { result in
+            switch result {
+            case .success(let response):
+                self.handleResponse(response: response, completion: completion)
+            case .failure(let error):
+                completion(.failure(.customError(error.localizedDescription)))
+            }
         }
     }
 }

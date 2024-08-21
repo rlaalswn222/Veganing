@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct RestaurantView: View {
+    @StateObject private var viewModel = HomeViewModel()
+
     let tags = ["전체", "락토", "비건", "오보", "락토 오보", "페스코"]
     let locations = [
         Location(image: "location", name: "지역 검색"),
@@ -21,14 +23,14 @@ struct RestaurantView: View {
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
-    let restaurants = [
-        Restaurant(title: "달리아 다이닝", location: "Seoul", image: "restaurant1", ing: "12:00 ~ 21:30", review: 3),
-        Restaurant(title: "펀치브런치바", location: "Busan", image: "restaurant2", ing: "12:00 ~ 21:30", review: 2),
-        Restaurant(title: "아민 연남", location: "Daegu", image: "restaurant3", ing: "12:00 ~ 21:30", review: 5),
-        Restaurant(title: "레이지 파머스", location: "Incheon", image: "restaurant4", ing: "12:00 ~ 21:30", review: 4),
-        Restaurant(title: "빌라드 코스테스", location: "Incheon", image: "restaurant5", ing: "12:00 ~ 21:30", review: 4),
-        Restaurant(title: "바이두부", location: "Incheon", image: "restaurant6", ing: "12:00 ~ 21:30", review: 4)
-    ]
+//    let restaurants = [
+//        Restaurant(title: "달리아 다이닝", location: "Seoul", image: "restaurant1", ing: "12:00 ~ 21:30", review: 3),
+//        Restaurant(title: "펀치브런치바", location: "Busan", image: "restaurant2", ing: "12:00 ~ 21:30", review: 2),
+//        Restaurant(title: "아민 연남", location: "Daegu", image: "restaurant3", ing: "12:00 ~ 21:30", review: 5),
+//        Restaurant(title: "레이지 파머스", location: "Incheon", image: "restaurant4", ing: "12:00 ~ 21:30", review: 4),
+//        Restaurant(title: "빌라드 코스테스", location: "Incheon", image: "restaurant5", ing: "12:00 ~ 21:30", review: 4),
+//        Restaurant(title: "바이두부", location: "Incheon", image: "restaurant6", ing: "12:00 ~ 21:30", review: 4)
+//    ]
     @State private var selectedTags: [String] = []
     @Environment(\.presentationMode) var presentationMode
 
@@ -71,61 +73,61 @@ struct RestaurantView: View {
                 .frame(height: 50)
                 .padding(.bottom,20)
                 .padding(.top,-120)
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(restaurants) { restaurant in
-                        VStack {
-                            Image(restaurant.image)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .clipShape(Circle())
-                                .overlay(
-                                    Circle().stroke(Color.white, lineWidth: 2)
-                                )
-                            Text(restaurant.title)
-                                .font(Font.custom("NanumSquare Neo OTF", size: 14).bold())
-                                .foregroundColor(.black)
-                            Text(restaurant.location)
-                                .font(Font.custom("NanumSquare Neo OTF", size: 12))
-                                .foregroundColor(.gray)
-                            HStack {
-                                Text("영업중")
-                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                                    .foregroundColor(.main)
-                                    .multilineTextAlignment(.leading)
-                                
-                                Text(restaurant.ing)
-                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                            }
-                            
-                            HStack {
-                                Text("리뷰 평점")
-                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
-                                    .foregroundColor(.grey4)
-                                    .frame(width: 45,height: 14)
-                                HStack {
-                                    ForEach(0..<restaurant.review, id: \.self) {_ in
-                                        Image("fillStar")
-                                            .resizable()
-                                            .frame(width: 10,height: 10)
-                                    }
-                                    ForEach(restaurant.review..<5, id:\.self) {_ in
-                                        Image("star")
-                                            .resizable()
-                                            .frame(width: 10,height: 10)
-                                    }
-                                }
-                            }
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                    }
-                }
-                .padding(.top,10)
-            }
+//            ScrollView {
+//                LazyVGrid(columns: columns, spacing: 10) {
+//                    ForEach(viewModel.restaurants) { restaurant in
+//                        VStack {
+//                            Image(restaurant.image)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 100, height: 100)
+//                                .clipShape(Circle())
+//                                .overlay(
+//                                    Circle().stroke(Color.white, lineWidth: 2)
+//                                )
+//                            Text(restaurant.title)
+//                                .font(Font.custom("NanumSquare Neo OTF", size: 14).bold())
+//                                .foregroundColor(.black)
+//                            Text(restaurant.location)
+//                                .font(Font.custom("NanumSquare Neo OTF", size: 12))
+//                                .foregroundColor(.gray)
+//                            HStack {
+//                                Text("영업중")
+//                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+//                                    .foregroundColor(.main)
+//                                    .multilineTextAlignment(.leading)
+//                                
+//                                Text(restaurant.ing)
+//                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+//                            }
+//                            
+//                            HStack {
+//                                Text("리뷰 평점")
+//                                    .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
+//                                    .foregroundColor(.grey4)
+//                                    .frame(width: 45,height: 14)
+//                                HStack {
+//                                    ForEach(0..<restaurant.review, id: \.self) {_ in
+//                                        Image("fillStar")
+//                                            .resizable()
+//                                            .frame(width: 10,height: 10)
+//                                    }
+//                                    ForEach(restaurant.review..<5, id:\.self) {_ in
+//                                        Image("star")
+//                                            .resizable()
+//                                            .frame(width: 10,height: 10)
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        .padding()
+//                        .background(Color.white)
+//                        .cornerRadius(10)
+//                        .shadow(radius: 5)
+//                    }
+//                }
+//                .padding(.top,10)
+//            }
             .padding(.top,-50)
         }
         .navigationBarTitleDisplayMode(.inline)
