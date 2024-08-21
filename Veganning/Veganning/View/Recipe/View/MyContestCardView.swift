@@ -15,13 +15,15 @@ struct MyContestCardView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(height: 120)
+                        .aspectRatio(contentMode: .fill)
                         .clipped()
                 } else {
                     // 기본 이미지 표시
-                    Image(systemName: "food_image")
+                    Image(systemName: "pooding2")
                         .resizable()
                         .scaledToFill()
                         .frame(height: 120)
+                    
                         .clipped()
                 }
                 

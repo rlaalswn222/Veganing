@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct VeganningApp: App {
+    var recipeData = RecipeData()
 
     var body: some Scene {
         WindowGroup {
             TabbedView()
+                .environmentObject(recipeData) 
         }
     }
 }

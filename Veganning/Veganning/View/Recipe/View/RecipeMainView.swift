@@ -3,21 +3,9 @@ import SwiftUI
 struct RecipeMainView: View {
     @State private var selectedTab: Int = 1
     @State private var selectedFilter: String = ""
-    @State private var selectedBottomTab = 1
     @State private var isShowingRecipeContest: Bool = false
     
-    // 서버에서 더미데이터 들어갈 자리
-    let recipes = [
-        RecipeCardModel(title: "그리너리 포케", likes: 25, comments: 5, recipeImage: UIImage(named: "food_image"),recipedetail: "야채를 손질해준다."),
-        RecipeCardModel(title: "원데이식스밀 국수", likes: 25, comments: 5, recipeImage: UIImage(named: "onedaysixmeal_image"),recipedetail: "야채를 손질해준다."),
-        RecipeCardModel(title: "그리너리 포케", likes: 25, comments: 5, recipeImage: UIImage(named: "food_image"),recipedetail: "야채를 손질해준다.")
-       
-    ]
-    
-    let contest = [
-        MyContestCardModel(MCtitle: "그리너리 포케", MClikes: 25, MCcomments: 5, MCrecipedetail: "야채를 손질해준다."),
-        MyContestCardModel(MCtitle: "그리너리 포케", MClikes: 25, MCcomments: 5, MCrecipedetail: "야채를 손질해준다.")
-    ]
+    @EnvironmentObject var recipeData: RecipeData
     
     var body: some View {
         NavigationView {
@@ -93,7 +81,7 @@ struct RecipeMainView: View {
                     // 조건부 뷰 표시
                     if selectedTab == 1 {
                         // 레시피 목록 뷰
-                        List(recipes) { recipe in
+                        List(recipeData.recipes) { recipe in
                             RecipeCardView(recipe: recipe)
                                 .padding(.vertical, 15)
                                 .background(Color.white)
@@ -106,7 +94,7 @@ struct RecipeMainView: View {
                         .padding()
                     } else {
                         // 내 공모 목록 뷰
-                        List(contest) { contestItem in
+                        List(recipeData.contests) { contestItem in
                             MyContestCardView(contest: contestItem)
                                 .padding(.vertical, 15)
                                 .background(Color.white)
@@ -132,8 +120,8 @@ struct RecipeMainView: View {
                                 isShowingRecipeContest = true
                             }) {
                                 Image("floating_button")
-                                    .renderingMode(.original) // 이미지가 본래 크기와 모양을 유지하도록 설정
-                                    .frame(width: 60, height: 60) // 원하는 고정 크기로 설정
+                                    .renderingMode(.original)
+                                    .frame(width: 60, height: 60)
                                     .padding()
                                     .clipShape(Circle())
                                     .shadow(radius: 2)
@@ -149,8 +137,6 @@ struct RecipeMainView: View {
                         }
                     }
                 }
-
-
             }
             .navigationBarBackButtonHidden()
         }
@@ -160,6 +146,7 @@ struct RecipeMainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeMainView()
+            .environmentObject(RecipeData())
     }
 }
 
