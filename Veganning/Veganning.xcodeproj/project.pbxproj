@@ -60,6 +60,8 @@
 		58299B032C761F94001BBF0F /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B022C761F94001BBF0F /* HomeRequest.swift */; };
 		58299B052C7620A0001BBF0F /* RecipeListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B042C7620A0001BBF0F /* RecipeListRequest.swift */; };
 		58299B072C762186001BBF0F /* RecipeListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B062C762186001BBF0F /* RecipeListResponse.swift */; };
+		58299B232C767482001BBF0F /* WeeklyStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B222C767482001BBF0F /* WeeklyStoreResponse.swift */; };
+		58299B252C7674CE001BBF0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B242C7674CE001BBF0F /* HomeViewModel.swift */; };
 		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
 		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
 		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
@@ -147,6 +149,9 @@
 		58299B022C761F94001BBF0F /* HomeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
 		58299B042C7620A0001BBF0F /* RecipeListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListRequest.swift; sourceTree = "<group>"; };
 		58299B062C762186001BBF0F /* RecipeListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListResponse.swift; sourceTree = "<group>"; };
+		58299B222C767482001BBF0F /* WeeklyStoreResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyStoreResponse.swift; sourceTree = "<group>"; };
+		58299B242C7674CE001BBF0F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		58299B262C767563001BBF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5847F1022C5CFAC8001AC04E /* Veganning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847F1052C5CFAC8001AC04E /* VeganningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningApp.swift; sourceTree = "<group>"; };
 		5847F1072C5CFAC8001AC04E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -279,6 +284,7 @@
 		58299AE92C761921001BBF0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58299B222C767482001BBF0F /* WeeklyStoreResponse.swift */,
 				58299B002C761DD4001BBF0F /* BaseResponse.swift */,
 				58299B022C761F94001BBF0F /* HomeRequest.swift */,
 				58299B042C7620A0001BBF0F /* RecipeListRequest.swift */,
@@ -336,6 +342,7 @@
 		5847F1042C5CFAC8001AC04E /* Veganning */ = {
 			isa = PBXGroup;
 			children = (
+				58299B262C767563001BBF0F /* Info.plist */,
 				58299AE82C761906001BBF0F /* Networks */,
 				58C316442C68EC3D001374EC /* Global */,
 				52D6C9822C5D0A2B00EB505B /* View */,
@@ -384,6 +391,7 @@
 		58C3163C2C68E8BA001374EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				58299B242C7674CE001BBF0F /* HomeViewModel.swift */,
 				58299ADB2C7397FD001BBF0F /* Model */,
 				58C3163D2C68E8E7001374EC /* HomeView.swift */,
 				58C316672C709AA0001374EC /* CarouselView.swift */,
@@ -565,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				523BC5E52C6A5453007CDFA2 /* RecommendRecipeCard.swift in Sources */,
+				58299B232C767482001BBF0F /* WeeklyStoreResponse.swift in Sources */,
 				523BC5E92C6A5759007CDFA2 /* RecipeReviewModel.swift in Sources */,
 				5232A5232C68FDE600B344E9 /* FilterBar.swift in Sources */,
 				523BC5F22C6B3ED7007CDFA2 /* ImagePicker.swift in Sources */,
@@ -600,6 +609,7 @@
 				52A9DFA22C76277800A22AC2 /* RecipeDetailRespone.swift in Sources */,
 				523BC5F42C6B4067007CDFA2 /* IngredientModel.swift in Sources */,
 				523BC5E32C6A51B1007CDFA2 /* RecipeDetailCardView.swift in Sources */,
+				58299B252C7674CE001BBF0F /* HomeViewModel.swift in Sources */,
 				523BC5F92C6B4198007CDFA2 /* RecipeStepView.swift in Sources */,
 				5232A5272C68FFF000B344E9 /* ContestFilterBar.swift in Sources */,
 				5232A5212C68F84A00B344E9 /* RecipeCardView.swift in Sources */,
@@ -791,6 +801,7 @@
 				DEVELOPMENT_TEAM = G62DUX396A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Veganning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -820,6 +831,7 @@
 				DEVELOPMENT_TEAM = G62DUX396A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Veganning/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
