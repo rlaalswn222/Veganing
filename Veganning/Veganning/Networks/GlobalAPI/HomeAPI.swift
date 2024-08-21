@@ -14,7 +14,8 @@ enum HomeAPI {
 
 extension HomeAPI: TargetType {
     var headers: [String : String]? {
-        
+        var headers: [String: String] = ["Content-Type": "application/json"]
+        return headers
     }
     
     var baseURL: URL {
