@@ -62,6 +62,11 @@
 		58299B072C762186001BBF0F /* RecipeListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B062C762186001BBF0F /* RecipeListResponse.swift */; };
 		58299B232C767482001BBF0F /* WeeklyStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B222C767482001BBF0F /* WeeklyStoreResponse.swift */; };
 		58299B252C7674CE001BBF0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B242C7674CE001BBF0F /* HomeViewModel.swift */; };
+		58299B292C767605001BBF0F /* RetaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B272C767604001BBF0F /* RetaurantModel.swift */; };
+		58299B2E2C76760D001BBF0F /* MyPageCalenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B2A2C76760D001BBF0F /* MyPageCalenderCardView.swift */; };
+		58299B2F2C76760D001BBF0F /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B2B2C76760D001BBF0F /* MyPageView.swift */; };
+		58299B302C76760D001BBF0F /* RecipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B2C2C76760D001BBF0F /* RecipeSearchView.swift */; };
+		58299B322C76766B001BBF0F /* RecipeSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58299B312C76766B001BBF0F /* RecipeSaveModel.swift */; };
 		5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1052C5CFAC8001AC04E /* VeganningApp.swift */; };
 		5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1072C5CFAC8001AC04E /* ContentView.swift */; };
 		5847F10A2C5CFAC9001AC04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847F1092C5CFAC9001AC04E /* Assets.xcassets */; };
@@ -71,7 +76,6 @@
 		5847F1232C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */; };
 		58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316392C68E111001374EC /* CustomTabView.swift */; };
 		58C3163E2C68E8E7001374EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C3163D2C68E8E7001374EC /* HomeView.swift */; };
-		58C316412C68E8FC001374EC /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316402C68E8FC001374EC /* MyPageView.swift */; };
 		58C316432C68E946001374EC /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316422C68E946001374EC /* TabbedView.swift */; };
 		58C316462C68EC56001374EC /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C316452C68EC56001374EC /* RoundedCornersShape.swift */; };
 		58C316602C6B5A54001374EC /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 58C3165F2C6B5A54001374EC /* CollectionViewPagingLayout */; };
@@ -152,6 +156,11 @@
 		58299B222C767482001BBF0F /* WeeklyStoreResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyStoreResponse.swift; sourceTree = "<group>"; };
 		58299B242C7674CE001BBF0F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		58299B262C767563001BBF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58299B272C767604001BBF0F /* RetaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetaurantModel.swift; sourceTree = "<group>"; };
+		58299B2A2C76760D001BBF0F /* MyPageCalenderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCalenderCardView.swift; sourceTree = "<group>"; };
+		58299B2B2C76760D001BBF0F /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		58299B2C2C76760D001BBF0F /* RecipeSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchView.swift; sourceTree = "<group>"; };
+		58299B312C76766B001BBF0F /* RecipeSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSaveModel.swift; sourceTree = "<group>"; };
 		5847F1022C5CFAC8001AC04E /* Veganning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847F1052C5CFAC8001AC04E /* VeganningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningApp.swift; sourceTree = "<group>"; };
 		5847F1072C5CFAC8001AC04E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,7 +173,6 @@
 		5847F1222C5CFAC9001AC04E /* VeganningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganningUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		58C316392C68E111001374EC /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		58C3163D2C68E8E7001374EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		58C316402C68E8FC001374EC /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		58C316422C68E946001374EC /* TabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedView.swift; sourceTree = "<group>"; };
 		58C316452C68EC56001374EC /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		58C316492C6900B5001374EC /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
@@ -318,6 +326,25 @@
 			path = GlobalAPI;
 			sourceTree = "<group>";
 		};
+		58299B282C767604001BBF0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58299B272C767604001BBF0F /* RetaurantModel.swift */,
+				58299B312C76766B001BBF0F /* RecipeSaveModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58299B2D2C76760D001BBF0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58299B2A2C76760D001BBF0F /* MyPageCalenderCardView.swift */,
+				58299B2B2C76760D001BBF0F /* MyPageView.swift */,
+				58299B2C2C76760D001BBF0F /* RecipeSearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5847F0F92C5CFAC8001AC04E = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +435,8 @@
 		58C3163F2C68E8ED001374EC /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				58C316402C68E8FC001374EC /* MyPageView.swift */,
+				58299B2D2C76760D001BBF0F /* View */,
+				58299B282C767604001BBF0F /* Model */,
 			);
 			name = MyPage;
 			path = ../MyPage;
@@ -574,11 +602,13 @@
 			files = (
 				523BC5E52C6A5453007CDFA2 /* RecommendRecipeCard.swift in Sources */,
 				58299B232C767482001BBF0F /* WeeklyStoreResponse.swift in Sources */,
+				58299B2F2C76760D001BBF0F /* MyPageView.swift in Sources */,
 				523BC5E92C6A5759007CDFA2 /* RecipeReviewModel.swift in Sources */,
 				5232A5232C68FDE600B344E9 /* FilterBar.swift in Sources */,
 				523BC5F22C6B3ED7007CDFA2 /* ImagePicker.swift in Sources */,
 				52A9DFA62C762D0B00A22AC2 /* RecipeDetailRequest.swift in Sources */,
 				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
+				58299B302C76760D001BBF0F /* RecipeSearchView.swift in Sources */,
 				5232A52F2C6902EB00B344E9 /* RecipeDetailView.swift in Sources */,
 				52A9DFA82C762E6900A22AC2 /* RecipeContestRequest.swift in Sources */,
 				58C3166A2C709AFB001374EC /* HomeCardView.swift in Sources */,
@@ -592,8 +622,10 @@
 				58299ADD2C739830001BBF0F /* Restaurant.swift in Sources */,
 				58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */,
 				58299B052C7620A0001BBF0F /* RecipeListRequest.swift in Sources */,
+				58299B322C76766B001BBF0F /* RecipeSaveModel.swift in Sources */,
 				52A9DFB82C76519E00A22AC2 /* RecipeReviewWriteRequest.swift in Sources */,
 				52A9DFAC2C763FF500A22AC2 /* MyContestListResponse.swift in Sources */,
+				58299B292C767605001BBF0F /* RetaurantModel.swift in Sources */,
 				58299AEC2C761959001BBF0F /* GeneralAPI.swift in Sources */,
 				58C316682C709AA0001374EC /* CarouselView.swift in Sources */,
 				58299AE72C75F9CF001BBF0F /* TagsView.swift in Sources */,
@@ -616,11 +648,11 @@
 				58299B072C762186001BBF0F /* RecipeListResponse.swift in Sources */,
 				58299AF02C761A70001BBF0F /* RecipeAPI.swift in Sources */,
 				58299AE32C7599DD001BBF0F /* RestaurantView.swift in Sources */,
+				58299B2E2C76760D001BBF0F /* MyPageCalenderCardView.swift in Sources */,
 				58299AEE2C761A65001BBF0F /* HomeAPI.swift in Sources */,
 				523BC5F02C6B301B007CDFA2 /* MyContestCardModel.swift in Sources */,
 				52A9DFB22C764A9F00A22AC2 /* RecipePreviewResponse.swift in Sources */,
 				5232A5292C69012F00B344E9 /* RecipeCardModel.swift in Sources */,
-				58C316412C68E8FC001374EC /* MyPageView.swift in Sources */,
 				58C316462C68EC56001374EC /* RoundedCornersShape.swift in Sources */,
 				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
 				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
