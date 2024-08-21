@@ -35,10 +35,11 @@ struct RestaurantView: View {
     var body: some View {
         VStack {
             NavigationView {
-                VStack {
+                VStack(alignment: .leading) {
                     Text("지역을 선택할 수 있어요")
                         .font(Font.custom("NanumSquare Neo OTF", size: 16))
                         .foregroundColor(.white)
+                        .padding(.leading,20)
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 16) {
                             ForEach(locations, id: \.self) { location in
@@ -59,16 +60,17 @@ struct RestaurantView: View {
                         }
                         .padding(.horizontal, 16)
                     }
-                    .frame(height: 70)
+                    .frame(height: 80)
                 }
                 .frame(height: 148)
                 .frame(maxWidth: .infinity)
-                .background(Color.main2.ignoresSafeArea(edges: .top))
-                .zIndex(1)
+                .background(Color.main2)
+                .padding(.top,-120)
             }
             TagsView(tags: tags, selectedTags: $selectedTags)
                 .frame(height: 50)
                 .padding(.bottom,20)
+                .padding(.top,-120)
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(restaurants) { restaurant in
@@ -91,6 +93,8 @@ struct RestaurantView: View {
                                 Text("영업중")
                                     .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                                     .foregroundColor(.main)
+                                    .multilineTextAlignment(.leading)
+                                
                                 Text(restaurant.ing)
                                     .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                             }
@@ -99,16 +103,18 @@ struct RestaurantView: View {
                                 Text("리뷰 평점")
                                     .font(Font.custom("NanumSquare Neo OTF", size: 12).bold())
                                     .foregroundColor(.grey4)
-                                    .frame(width: 40,height: 14)
-                                ForEach(0..<restaurant.review, id: \.self) {_ in
-                                    Image("fillStar")
-                                        .resizable()
-                                        .frame(width: 10,height: 10)
-                                }
-                                ForEach(restaurant.review..<5, id:\.self) {_ in
-                                    Image("star")
-                                        .resizable()
-                                        .frame(width: 10,height: 10)
+                                    .frame(width: 45,height: 14)
+                                HStack {
+                                    ForEach(0..<restaurant.review, id: \.self) {_ in
+                                        Image("fillStar")
+                                            .resizable()
+                                            .frame(width: 10,height: 10)
+                                    }
+                                    ForEach(restaurant.review..<5, id:\.self) {_ in
+                                        Image("star")
+                                            .resizable()
+                                            .frame(width: 10,height: 10)
+                                    }
                                 }
                             }
                         }
@@ -117,8 +123,10 @@ struct RestaurantView: View {
                         .cornerRadius(10)
                         .shadow(radius: 5)
                     }
-                } }
-            Spacer()
+                }
+                .padding(.top,10)
+            }
+            .padding(.top,-50)
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -129,7 +137,7 @@ struct RestaurantView: View {
                 }) {
                     Image("backBtn")
                         .resizable()
-                        .frame(width: 24, height: 24) // Adjust size if needed
+                        .frame(width: 24, height: 24)
                 }
             }
             ToolbarItem(placement: .principal) {
@@ -138,10 +146,11 @@ struct RestaurantView: View {
                         .font(Font.custom("NanumSquare Neo OTF", size: 20))
                     Text("5월3주차, 다른비거너들이 많이 찾는 비건 식당이에요.")
                         .font(Font.custom("NanumSquare Neo OTF", size: 11))
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grey4)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+            
         }
     }
 }

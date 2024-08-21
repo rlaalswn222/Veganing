@@ -22,17 +22,23 @@ struct TagsView: View {
                         .padding(.vertical, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 25)
-                                .fill(selectedTags.contains(tag) ? Color.sub1 : Color.white) // Background color
+                                .fill(selectedTags.contains(tag) ? Color.sub1 : Color.white)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 25)
-                                        .stroke(Color.grey2, lineWidth: 1) // Gray stroke
+                                        .stroke(Color.grey2, lineWidth: 1)
                                 )
                         )
+                        .foregroundColor(selectedTags.contains(tag) ? Color.black : Color.grey4)
                         .onTapGesture {
                             if let index = selectedTags.firstIndex(of: tag) {
                                 selectedTags.remove(at: index)
                             } else {
                                 selectedTags.append(tag)
+                            }
+                        }
+                        .onAppear {
+                            if selectedTags.isEmpty, let firstTag = tags.first {
+                                selectedTags.append(firstTag)
                             }
                         }
                 }
