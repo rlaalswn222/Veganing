@@ -78,7 +78,6 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .padding(.horizontal)
                         
-                        
                         LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(viewModel.restaurants) { restaurant in
                                 VStack {
@@ -88,18 +87,14 @@ struct HomeView: View {
                                             .scaledToFit()
                                             .frame(width: 100, height: 100)
                                             .clipShape(Circle())
-                                            .overlay(
-                                                Circle().stroke(Color.white, lineWidth: 2)
-                                            )
+                                            .overlay(Circle().stroke(Color.white, lineWidth: 2))
                                     } else {
                                         Image(systemName: "photo")
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 100, height: 100)
                                             .clipShape(Circle())
-                                            .overlay(
-                                                Circle().stroke(Color.white, lineWidth: 2)
-                                            )
+                                            .overlay(Circle().stroke(Color.white, lineWidth: 2))
                                     }
                                     
                                     Text(restaurant.name)
@@ -149,14 +144,20 @@ struct HomeView: View {
             .navigationBarBackButtonHidden()
         }
         .scrollIndicators(.hidden)
+        .onAppear {
+            viewModel.fetchRestaurants()
+        }
     }
+    
 }
 
 // Base64 문자열을 UIImage로 변환하는 헬퍼 함수 (데이터 스킴 제거 포함)
 func decodeBase64ToUIImage(base64String: String) -> UIImage? {
-    // 데이터 스킴 부분("data:image/...;base64,")을 제거
+    // Handle potential data URI scheme
     let cleanedString = base64String.components(separatedBy: ",").last ?? base64String
-    guard let imageData = Data(base64Encoded: cleanedString) else { return nil }
+    guard let imageData = Data(base64Encoded: cleanedString, options: .ignoreUnknownCharacters) else {
+        return nil
+    }
     return UIImage(data: imageData)
 }
 

@@ -10,7 +10,6 @@ import Foundation
 struct BaseResponse<T: Codable>: Codable {
     let isSuccess: Bool
     let code: Int
-    let status: String
     let data: T?
-    let message: String?
+    let message: String
 }

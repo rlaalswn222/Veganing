@@ -50,10 +50,10 @@ class HomeService {
                     if let result = baseResponse.data {
                         completion(.success(result))
                     } else {
-//                        completion(.failure(.customError(baseResponse.message)))
+                        completion(.failure(.customError(baseResponse.message)))
                     }
                 } else {
-//                    completion(.failure(.customError(baseResponse.message)))
+                    completion(.failure(.customError(baseResponse.message)))
                 }
             } catch {
                 completion(.failure(.decodingError(error)))
