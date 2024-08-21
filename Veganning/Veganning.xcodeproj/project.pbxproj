@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411E6DAC2C76779B00180FA4 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E6DAB2C76779B00180FA4 /* CalendarModel.swift */; };
+		411E6DAF2C768E1700180FA4 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 411E6DAE2C768E1700180FA4 /* HorizonCalendar */; };
+		411E6DB12C76ABDC00180FA4 /* TodayRecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E6DB02C76ABDC00180FA4 /* TodayRecipeCardView.swift */; };
+		411E6DB32C76AF3800180FA4 /* TodayKcalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E6DB22C76AF3800180FA4 /* TodayKcalCardView.swift */; };
+		41C6A8202C7635A5009EC07E /* RecipeSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A81E2C7635A5009EC07E /* RecipeSaveModel.swift */; };
+		41C6A8262C7635B3009EC07E /* SaveningRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A8222C7635B3009EC07E /* SaveningRecipeView.swift */; };
+		41C6A8282C7635B3009EC07E /* SaveningRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A8242C7635B3009EC07E /* SaveningRestaurantView.swift */; };
+		41C6A8292C7635B3009EC07E /* SaveRetaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A8252C7635B3009EC07E /* SaveRetaurantCardView.swift */; };
+		41C6A82D2C7635F2009EC07E /* RetaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A82C2C7635F2009EC07E /* RetaurantModel.swift */; };
+		41C6A82F2C763781009EC07E /* MyPageCalenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A82E2C763781009EC07E /* MyPageCalenderCardView.swift */; };
+		41C6A8312C763A6A009EC07E /* RecipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6A8302C763A6A009EC07E /* RecipeSearchView.swift */; };
 		5232A51A2C63D29D00B344E9 /* MyContestEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232A5192C63D29D00B344E9 /* MyContestEditView.swift */; };
 		5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232A51D2C63DB5300B344E9 /* RecipeContest.swift */; };
 		5232A5212C68F84A00B344E9 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232A5202C68F84A00B344E9 /* RecipeCardView.swift */; };
@@ -111,6 +122,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411E6DAB2C76779B00180FA4 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		411E6DB02C76ABDC00180FA4 /* TodayRecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipeCardView.swift; sourceTree = "<group>"; };
+		411E6DB22C76AF3800180FA4 /* TodayKcalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayKcalCardView.swift; sourceTree = "<group>"; };
+		41C6A81E2C7635A5009EC07E /* RecipeSaveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeSaveModel.swift; path = ../../../../../../Veganing_fin/Veganning/Veganning/MyPage/Model/RecipeSaveModel.swift; sourceTree = "<group>"; };
+		41C6A8222C7635B3009EC07E /* SaveningRecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveningRecipeView.swift; path = ../../../../../../Veganing_fin/Veganning/Veganning/MyPage/View/SaveningRecipeView.swift; sourceTree = "<group>"; };
+		41C6A8242C7635B3009EC07E /* SaveningRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveningRestaurantView.swift; path = ../../../../../../Veganing_fin/Veganning/Veganning/MyPage/View/SaveningRestaurantView.swift; sourceTree = "<group>"; };
+		41C6A8252C7635B3009EC07E /* SaveRetaurantCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveRetaurantCardView.swift; path = ../../../../../../Veganing_fin/Veganning/Veganning/MyPage/View/SaveRetaurantCardView.swift; sourceTree = "<group>"; };
+		41C6A82C2C7635F2009EC07E /* RetaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetaurantModel.swift; sourceTree = "<group>"; };
+		41C6A82E2C763781009EC07E /* MyPageCalenderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCalenderCardView.swift; sourceTree = "<group>"; };
+		41C6A8302C763A6A009EC07E /* RecipeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchView.swift; sourceTree = "<group>"; };
 		5232A5192C63D29D00B344E9 /* MyContestEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContestEditView.swift; sourceTree = "<group>"; };
 		5232A51D2C63DB5300B344E9 /* RecipeContest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeContest.swift; sourceTree = "<group>"; };
 		5232A5202C68F84A00B344E9 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
@@ -207,6 +228,7 @@
 				58299AF92C761C10001BBF0F /* CombineMoya in Frameworks */,
 				58299AFD2C761C10001BBF0F /* ReactiveMoya in Frameworks */,
 				58C316602C6B5A54001374EC /* CollectionViewPagingLayout in Frameworks */,
+				411E6DAF2C768E1700180FA4 /* HorizonCalendar in Frameworks */,
 				58299AFB2C761C10001BBF0F /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +250,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41C6A81C2C763538009EC07E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41C6A8222C7635B3009EC07E /* SaveningRecipeView.swift */,
+				41C6A8242C7635B3009EC07E /* SaveningRestaurantView.swift */,
+				41C6A8252C7635B3009EC07E /* SaveRetaurantCardView.swift */,
+				58C316402C68E8FC001374EC /* MyPageView.swift */,
+				41C6A82E2C763781009EC07E /* MyPageCalenderCardView.swift */,
+				41C6A8302C763A6A009EC07E /* RecipeSearchView.swift */,
+				411E6DB02C76ABDC00180FA4 /* TodayRecipeCardView.swift */,
+				411E6DB22C76AF3800180FA4 /* TodayKcalCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41C6A81D2C76353E009EC07E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41C6A81E2C7635A5009EC07E /* RecipeSaveModel.swift */,
+				41C6A82C2C7635F2009EC07E /* RetaurantModel.swift */,
+				411E6DAB2C76779B00180FA4 /* CalendarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		523BC5DE2C690374007CDFA2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,9 +513,14 @@
 		58C3163F2C68E8ED001374EC /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				58299B2D2C76760D001BBF0F /* View */,
 				58299B282C767604001BBF0F /* Model */,
 				58299B3B2C768618001BBF0F /* MyPageMainModel.swift */,
+=======
+				41C6A81D2C76353E009EC07E /* Model */,
+				41C6A81C2C763538009EC07E /* View */,
+>>>>>>> Stashed changes
 			);
 			name = MyPage;
 			path = ../MyPage;
@@ -513,6 +565,7 @@
 				58299AFA2C761C10001BBF0F /* Moya */,
 				58299AFC2C761C10001BBF0F /* ReactiveMoya */,
 				58299AFE2C761C10001BBF0F /* RxMoya */,
+				411E6DAE2C768E1700180FA4 /* HorizonCalendar */,
 			);
 			productName = Veganning;
 			productReference = 5847F1022C5CFAC8001AC04E /* Veganning.app */;
@@ -589,6 +642,7 @@
 			packageReferences = (
 				58C3165E2C6B5A54001374EC /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
 				58299AF72C761C10001BBF0F /* XCRemoteSwiftPackageReference "Moya" */,
+				411E6DAD2C768C9C00180FA4 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 			);
 			productRefGroup = 5847F1032C5CFAC8001AC04E /* Products */;
 			projectDirPath = "";
@@ -632,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411E6DB12C76ABDC00180FA4 /* TodayRecipeCardView.swift in Sources */,
 				523BC5E52C6A5453007CDFA2 /* RecommendRecipeCard.swift in Sources */,
 				58299B3E2C768647001BBF0F /* CalendarModel.swift in Sources */,
 				58299B232C767482001BBF0F /* WeeklyStoreResponse.swift in Sources */,
@@ -639,7 +694,11 @@
 				523BC5E92C6A5759007CDFA2 /* RecipeReviewModel.swift in Sources */,
 				5232A5232C68FDE600B344E9 /* FilterBar.swift in Sources */,
 				523BC5F22C6B3ED7007CDFA2 /* ImagePicker.swift in Sources */,
+<<<<<<< Updated upstream
 				52A9DFA62C762D0B00A22AC2 /* RecipeDetailRequest.swift in Sources */,
+=======
+				41C6A82D2C7635F2009EC07E /* RetaurantModel.swift in Sources */,
+>>>>>>> Stashed changes
 				5847F1082C5CFAC8001AC04E /* ContentView.swift in Sources */,
 				58299B302C76760D001BBF0F /* RecipeSearchView.swift in Sources */,
 				5232A52F2C6902EB00B344E9 /* RecipeDetailView.swift in Sources */,
@@ -660,12 +719,18 @@
 				52A9DFC82C7681A700A22AC2 /* RecipeViewModel.swift in Sources */,
 >>>>>>> Stashed changes
 				58F6BCC12C70BFC800487694 /* CustomRoundedRectangle.swift in Sources */,
+				41C6A8312C763A6A009EC07E /* RecipeSearchView.swift in Sources */,
 				58299B052C7620A0001BBF0F /* RecipeListRequest.swift in Sources */,
+<<<<<<< Updated upstream
 				58299B322C76766B001BBF0F /* RecipeSaveModel.swift in Sources */,
 				52A9DFB82C76519E00A22AC2 /* RecipeReviewWriteRequest.swift in Sources */,
 				52A9DFAC2C763FF500A22AC2 /* MyContestListResponse.swift in Sources */,
 				58299B292C767605001BBF0F /* RetaurantModel.swift in Sources */,
+=======
+				41C6A8282C7635B3009EC07E /* SaveningRestaurantView.swift in Sources */,
+>>>>>>> Stashed changes
 				58299AEC2C761959001BBF0F /* GeneralAPI.swift in Sources */,
+				411E6DB32C76AF3800180FA4 /* TodayKcalCardView.swift in Sources */,
 				58C316682C709AA0001374EC /* CarouselView.swift in Sources */,
 				52A9DFCB2C7684F900A22AC2 /* RecipeDetailViewModel.swift in Sources */,
 				58299AE72C75F9CF001BBF0F /* TagsView.swift in Sources */,
@@ -684,7 +749,9 @@
 				58299B252C7674CE001BBF0F /* HomeViewModel.swift in Sources */,
 				523BC5F92C6B4198007CDFA2 /* RecipeStepView.swift in Sources */,
 				5232A5272C68FFF000B344E9 /* ContestFilterBar.swift in Sources */,
+				41C6A8262C7635B3009EC07E /* SaveningRecipeView.swift in Sources */,
 				5232A5212C68F84A00B344E9 /* RecipeCardView.swift in Sources */,
+				41C6A8202C7635A5009EC07E /* RecipeSaveModel.swift in Sources */,
 				58299B072C762186001BBF0F /* RecipeListResponse.swift in Sources */,
 				58299AF02C761A70001BBF0F /* RecipeAPI.swift in Sources */,
 				58299AE32C7599DD001BBF0F /* RestaurantView.swift in Sources */,
@@ -695,11 +762,20 @@
 				5232A5292C69012F00B344E9 /* RecipeCardModel.swift in Sources */,
 				58C316462C68EC56001374EC /* RoundedCornersShape.swift in Sources */,
 				5847F1062C5CFAC8001AC04E /* VeganningApp.swift in Sources */,
+<<<<<<< Updated upstream
 				58299B3C2C768618001BBF0F /* MyPageMainModel.swift in Sources */,
 				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
 				58299AF42C761A8F001BBF0F /* HomeService.swift in Sources */,
 				5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */,
 				52A9DFB02C764A8E00A22AC2 /* RecipePreviewrequest.swift in Sources */,
+=======
+				41C6A8292C7635B3009EC07E /* SaveRetaurantCardView.swift in Sources */,
+				411E6DAC2C76779B00180FA4 /* CalendarModel.swift in Sources */,
+				58C3163A2C68E111001374EC /* CustomTabView.swift in Sources */,
+				58299AF42C761A8F001BBF0F /* HomeService.swift in Sources */,
+				5232A51E2C63DB5300B344E9 /* RecipeContest.swift in Sources */,
+				41C6A82F2C763781009EC07E /* MyPageCalenderCardView.swift in Sources */,
+>>>>>>> Stashed changes
 				523BC5E12C6A5050007CDFA2 /* RecipeDetailCardModel.swift in Sources */,
 				523BC5FC2C6B4542007CDFA2 /* ContestFinishPopup.swift in Sources */,
 				58299B3A2C767F70001BBF0F /* StoreDetailView.swift in Sources */,
@@ -1042,6 +1118,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		411E6DAD2C768C9C00180FA4 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		58299AF72C761C10001BBF0F /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1061,6 +1145,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		411E6DAE2C768E1700180FA4 /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 411E6DAD2C768C9C00180FA4 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
 		58299AF82C761C10001BBF0F /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58299AF72C761C10001BBF0F /* XCRemoteSwiftPackageReference "Moya" */;

@@ -13,6 +13,7 @@ enum HomeAPI {
     //
 }
 
+<<<<<<< Updated upstream
 extension HomeAPI: TargetType {
     var headers: [String : String]? {
         var headers: [String: String] = ["Content-Type": "application/json"]
@@ -45,5 +46,30 @@ extension HomeAPI: TargetType {
     }
     
 }
+=======
+//extension HomeAPI: TargetType {
+//    var headers: [String : String]? {
+//        var headers: [String: String] = ["Content-Type": "application/json"]
+//        return headers
+//    }
+//    
+//    var baseURL: URL {
+//        return URL(string: GeneralAPI.baseURL)!
+//    }
+//    
+//    var path: String {
+//        
+//    }
+//    
+//    var method: Moya.Method {
+//        
+//    }
+//    
+//    var task: Moya.Task {
+//        
+//    }
+//    
+//}
+>>>>>>> Stashed changes
 
 
