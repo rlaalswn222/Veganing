@@ -4,6 +4,7 @@ struct RecipeDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    let recipe: RecipeDetailCardModel // 외부에서 전달된 recipe 모델
     
     // 리뷰 데이터
     let reviewModels = [
@@ -11,19 +12,6 @@ struct RecipeDetailView: View {
         RecipeReviewModel(RVreviewerName: "박지영", RVreviewDate: "2024.07.09 (수)", RVrating: 4, RVcomment: "정말 간편하고 맛있어요! 가족들도 좋아하네요."),
         RecipeReviewModel(RVreviewerName: "김민수", RVreviewDate: "2024.07.10 (목)", RVrating: 5, RVcomment: "재료가 신선하고 레시피가 자세해서 좋았습니다.")
     ]
-    
-    // 샘플 데이터 (레시피의 단계별 설명)
-    let detailModels = [
-        RecipeDetailCardModel(dttitle: "1. 피망을 손질해주세요.", dtrecipeImage: nil, dtrecipedetail: "피망을 잘게 썰어줍니다.", dtImageName: "pimento1"),
-        RecipeDetailCardModel(dttitle: "2. 양파를 썰어주세요.", dtrecipeImage: nil, dtrecipedetail: "양파를 얇게 채썰어줍니다.", dtImageName: "pimento1"),
-        RecipeDetailCardModel(dttitle: "3. 토마토를 준비해주세요.", dtrecipeImage: nil, dtrecipedetail: "토마토를 작게 잘라줍니다.", dtImageName: "pimento1")
-    ]
-    
-    let recommendModels = [
-            RecommendRecipeModel(RRtitle: "커리 에그 샐러드", RRrecipeImage: nil, RRrating: 4, RRtotalRatings: 145, RRinstructions: ["계란을 12분간 삶아주세요.", "양파를 잘게 다져주세요."]),
-            RecommendRecipeModel(RRtitle: "시저 샐러드", RRrecipeImage: nil, RRrating: 5, RRtotalRatings: 200, RRinstructions: ["로메인을 씻어주세요.", "드레싱을 뿌려주세요."]),
-            RecommendRecipeModel(RRtitle: "그릭 샐러드", RRrecipeImage: nil, RRrating: 3, RRtotalRatings: 90, RRinstructions: ["토마토를 썰어주세요.", "페타 치즈를 추가해주세요."])
-        ]
     
     var body: some View {
         ScrollView {
@@ -79,7 +67,7 @@ struct RecipeDetailView: View {
                         
                         VStack(alignment: .leading) {
                             HStack {
-                                Text("락토 오보")
+                                Text(recipe.type) // Recipe의 타입을 표시
                                     .padding(10)
                                     .background(Color(red: 0.8, green: 1.0, blue: 0))
                                     .cornerRadius(20)
@@ -94,15 +82,15 @@ struct RecipeDetailView: View {
                             .padding(.horizontal)
                             
                             VStack(alignment: .leading) {
-                                Text("그리너리 포케")
+                                Text(recipe.name)
                                     .font(.title)
                                     .bold()
                                 HStack {
-                                    ForEach(0..<3) { _ in
+                                    ForEach(0..<Int(recipe.average_rating)) { _ in
                                         Image(systemName: "star.fill")
                                             .foregroundColor(.yellow)
                                     }
-                                    ForEach(0..<2) { _ in
+                                    ForEach(0..<(5 - Int(recipe.average_rating))) { _ in
                                         Image(systemName: "star")
                                             .foregroundColor(.yellow)
                                     }
@@ -110,18 +98,15 @@ struct RecipeDetailView: View {
                             }
                             .padding(.horizontal)
                             .padding(15)
-                           
                         }
-                       
                     }
-                    
                 }
                 .frame(height: 416)
                 Spacer()
                 
                 // Recipe Tabs
                 VStack {
-                    HStack(spacing: 40) { // 양옆에 약간만 떨어지게 조정
+                    HStack(spacing: 40) {
                         VStack {
                             ZStack {
                                 Circle()
@@ -165,9 +150,9 @@ struct RecipeDetailView: View {
                         }
                     }
                     .padding(.horizontal)
-                    .offset(y: 0) // 탭을 조금 더 아래로 조정
+                    .offset(y: 0)
                 }
-                .padding(.top, -20) // 이미지를 가리지 않도록 상단 패딩 조정
+                .padding(.top, -20)
                 
                 // Recipe Ingredients
                 VStack(alignment: .leading) {
@@ -181,11 +166,11 @@ struct RecipeDetailView: View {
                             .foregroundColor(.gray)
                     }
                     
-                    ForEach(0..<6) { _ in
+                    ForEach(recipe.ingredients, id: \.self) { ingredient in
                         HStack {
-                            Text("피망")
+                            Text(ingredient)
                             Spacer()
-                            Text("2개 (120g)")
+                            Text("적당량")  // 이 부분은 적절히 수정 필요
                         }
                         .padding(.vertical, 2)
                     }
@@ -198,8 +183,9 @@ struct RecipeDetailView: View {
                 
                 // Recipe Instructions
                 VStack(alignment: .leading) {
-                    ForEach(detailModels) { model in
-                        RecipeDetailCardView(dtmodel: model)
+                    ForEach(recipe.cookingStep, id: \.self) { step in
+                        Text(step)
+                            .padding(.vertical, 2)
                     }
                 }
                 .padding()
@@ -230,7 +216,7 @@ struct RecipeDetailView: View {
                 // Recommended Dishes
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("그리너리 포케").foregroundColor(.main)
+                        Text(recipe.name).foregroundColor(.main)
                         Text("와 유사한 추천 식단")
                     }
                     .padding(.leading)
@@ -252,6 +238,21 @@ struct RecipeDetailView: View {
 }
 
 #Preview {
-    RecipeDetailView()
+    // RecipeDetailCardModel의 샘플 데이터를 사용하여 미리보기
+    let sampleRecipe = RecipeDetailCardModel(
+        id: 1,
+        name: "Sample Recipe",
+        description: "Delicious and easy to make!",
+        image: "sample_image",
+        type: "Vegetarian",
+        carbohydrate: 30,
+        calorie: 250,
+        protein: 10,
+        fat: 5,
+        average_rating: 4,
+        ingredients: ["Tomatoes", "Cheese", "Basil"],
+        cookingStep: ["Slice tomatoes", "Add cheese", "Garnish with basil"]
+    )
+    return RecipeDetailView(recipe: sampleRecipe)
 }
 

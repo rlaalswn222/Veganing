@@ -9,10 +9,11 @@ import SwiftUI
 
 
 struct RecipeCardModel: Identifiable {
-    let id = UUID()
-    var title: String
-    var likes: Int
-    var comments: Int
-    var recipeImage : UIImage?
-    var recipedetail : String
+    let id : Int
+    var name: String
+    let image: String
+    let step_number_1: Int
+    let description_1: String
+    let step_number_2: Int
+    let description_2: String
 }
