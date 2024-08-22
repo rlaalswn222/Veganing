@@ -1,13 +1,9 @@
 import SwiftUI
 
 struct MyPageView: View {
-<<<<<<< Updated upstream
 //    let userSampleData: MyPageMainModel?
     
     @State private var offset: CGFloat = UIScreen.main.bounds.height * 0.5 // 초기 위치는 중간
-=======
-
->>>>>>> Stashed changes
     
     var body: some View {
         NavigationView {
@@ -17,11 +13,7 @@ struct MyPageView: View {
                     // 상단의 프로필 부분
                     ZStack {
                         // 배경 이미지
-<<<<<<< Updated upstream
                         Image("mypage_background")
-=======
-                        Image("Mypage_background")
->>>>>>> Stashed changes
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(height: 300)
@@ -35,7 +27,6 @@ struct MyPageView: View {
                                 .padding(.top, 50)
                                 .padding(.leading, 20)
                             
-<<<<<<< Updated upstream
 //                            Text("D + \(userSampleData?.date ?? 0)")  // 옵셔널 데이터 사용
 //                                .font(.custom("NanumSquareNeoOTF", size: 16))
 //                                .fontWeight(.bold)
@@ -48,20 +39,6 @@ struct MyPageView: View {
 //                                .foregroundColor(.white)
 //                                .padding(.leading, 20)
 //                                .padding(.bottom, 20)
-=======
-                            Text("D + 225")
-                                .font(.custom("NanumSquareNeoOTF", size: 16))
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("sub2"))
-                                .padding(.leading, 20)
-                            
-                            Text("김초록")
-                                .font(.custom("NanumSquareNeoOTF", size: 32))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(.leading, 20)
-                                .padding(.bottom, 20)
->>>>>>> Stashed changes
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         
@@ -107,46 +84,10 @@ struct MyPageView: View {
                         ScrollView {
                             VStack(spacing: 20) {
                                 // 달력과 하단 정보들 추가
-<<<<<<< Updated upstream
                                 MyPageCalendarCardView()
                                     .padding(.horizontal)
                             }
                             .padding(.bottom, 50) // 모달 내용에 여유 공간 추가
-=======
-                                MyPageCalenderCardView(month: Date())
-                                    .padding(.horizontal)
-                            }
-                            .padding(.bottom, 50) // 모달 내용에 여유 공간 추가
-                            
-                            HStack(spacing: 5) {
-                                Image("100")
-                                    .frame(width: 8, height: 8)
-                                Text("100% 완성")
-                                    .font(.custom("NanumSquareNeoOTF", size: 12))
-                                Image("70")
-                                    .frame(width: 8, height: 8)
-                                Text("70% 완성")
-                                    .font(.custom("NanumSquareNeoOTF", size: 12))
-                                Image("50")
-                                    .frame(width: 8, height: 8)
-                                Text("50% 완성")
-                                    .font(.custom("NanumSquareNeoOTF", size: 12))
-                                Image("0")
-                                    .frame(width: 8, height: 8)
-                                Text("실패")
-                                    .font(.custom("NanumSquareNeoOTF", size: 12))
-                                
-                                Spacer()
-                            }
-                            .padding(.leading, 10) // 왼쪽에 10 포인트의 패딩 추가
-                            .padding(.bottom, 20)
-                            VStack(spacing: 10){
-                                TodayRecipeCardView()
-                                    .padding(.bottom,5)
-                                TodayKcalCardView()
-                            }
-
->>>>>>> Stashed changes
                         }
                     }
                     .background(Color.white)
@@ -157,7 +98,6 @@ struct MyPageView: View {
                     Spacer()
                 }
             }
-<<<<<<< Updated upstream
             .navigationBarTitle("My Page", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {
@@ -168,12 +108,6 @@ struct MyPageView: View {
                         Image(systemName: "gearshape")
                             .foregroundColor(.black)
                     }
-=======
-            
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
->>>>>>> Stashed changes
                 }
             }
             .navigationBarBackButtonHidden()
@@ -181,10 +115,3 @@ struct MyPageView: View {
         .scrollIndicators(.hidden)
     }
 }
-<<<<<<< Updated upstream
-=======
-
-#Preview {
-    MyPageView()
-}
->>>>>>> Stashed changes
